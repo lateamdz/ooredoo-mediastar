@@ -1,0 +1,1674 @@
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"
+      dir="rtl" lang="ar">
+<script type="text/javascript" async="" src="http://www.google-analytics.com/analytics.js"></script>
+<script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-58PHK5M"></script>
+<script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
+<head>
+    <script type="text/javascript" async="" id="smcx-sdk"
+            src="https://eCol-or1.responsetek.com/datarepo/cssgen/ashx/interceptor.ashx?interceptor_guid=f3c-bc815045dc90&amp;eguid=4ff-20a37101ea33&amp;langId=2"></script>
+    <script type="text/javascript">
+        (function (n, t, i, r, u) {
+            var e, o, f;
+            n.SMCX = n.SMCX || [];
+            t.getElementById(r) || (e = t.getElementsByTagName(i), o = e[e.length - 1], f = t.createElement(i), f.type = "text/javascript", f.async = !0, f.id = r, f.src = "https://eCol-or1.responsetek.com/datarepo/cssgen/ashx/interceptor.ashx?interceptor_guid=f3c-bc815045dc90&eguid=4ff-20a37101ea33&langId=2", o.parentNode.insertBefore(f, o));
+            u && (n.SMCX.postData = u)
+        })(window, document, "script", "smcx-sdk")
+    </script>
+    <title>BLUE MIND</title>
+    <meta property="og:title" content="BLUE MIND">
+    <meta name="twitter:title" content="BLUE MIND">
+    <meta itemprop="name" content="BLUE MIND">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript">
+        var captchaResponse = "";
+        var captchaClientId = "";
+        window.onloadCallback = function () {
+            if ($('#g_recaptcha_1').length > 0)
+                captchaClientId = grecaptcha.render('g_recaptcha_1', {
+                    'sitekey': $('#sec_key').val(),
+                    'callback': popup
+                });
+            if ($('#g_recaptcha_2').length > 0)
+                captchaClientId = grecaptcha.render('g_recaptcha_2', {
+                    'sitekey': $('#sec_key').val(),
+                    'callback': callMeDefault
+                });
+            if ($('#g_recaptcha_contactus').length > 0)
+                captchaClientId = grecaptcha.render('g_recaptcha_contactus', {
+                    'sitekey': $('#sec_key').val(),
+                    'callback': contactus
+                });
+        };
+        var popup = function (response) {
+            captchaResponse = response;
+        };
+        var callMeDefault = function (response) {
+            captchaResponse = response;
+        };
+        var contactus = function (response) {
+            captchaResponse = response;
+        };
+    </script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '543383735871123');
+        fbq('track', "PageView");
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=543383735871123&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    <meta name="keywords" content="">
+    <link rel="apple-touch-icon" sizes="120x120"
+          href="../ODZ-Assets/imgs/apple-touch-icon-120x120-precomposed.png">
+    <link rel="apple-touch-icon" sizes="152x152"
+          href="../ODZ-Assets/imgs/apple-touch-icon-152x152-precomposed.png">
+    <script src="https://static.addtoany.com/menu/modules/core.26680508.js" type="module"></script>
+
+    <!-- Formulaire -->
+    <link href="../assets/dist/css/icons.css" rel="stylesheet">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/dist/css/form-validation.css" rel="stylesheet">
+    <link href="../assets/dist/css/bluemind.css" rel="stylesheet">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript">
+        const db = window.localStorage.getItem("users");
+        const participated = db ? JSON.parse(db) : []
+
+        function verifyUser(element) {
+            if (element.value) {
+                if (participated.includes(element.value)) {
+                    console.log("user already participated")
+                    document.getElementById("phone").classList.add("input-invalid");
+                    document.getElementById("error-user-exists").classList.remove("d-none");
+                } else {
+                    document.getElementById("error-user-exists").classList.add("d-none");
+                    document.getElementById("phone").classList.remove("input-invalid");
+                }
+            }
+        }
+
+        function process(element) {
+            const recapchaChecked = grecaptcha && grecaptcha.getResponse().length > 0;
+            if (!recapchaChecked) return;
+            // const form = element.closest('form')
+            const value = {
+                ["raisonSociale"]: document.getElementById('raisonSociale').value,
+                ["nomDuContact"]: document.getElementById('nomDuContact').value,
+                ["postOccupe"]: document.getElementById('postOccupe').value,
+                ["adresse"]: document.getElementById('adresse').value,
+                ["wilaya"]: document.getElementById('wilaya').value,
+                ["phone"]: document.getElementById('phone').value,
+                ["nombreEmployes"]: document.getElementById('nombreEmployes').value,
+                ["secteurActivite"]: document.getElementById('secteurActivite').value,
+                ["email"]: document.getElementById('email').value,
+                ["nombreMail"]: document.getElementById('nombreMail').value,
+                ["besoinStockage"]: document.getElementById('besoinStockage').value,
+                // ["condition-accept"]: document.getElementById('condition-accept').checked,
+            }
+            if (!new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/).test(value["email"])) return
+            if (!new RegExp(`^-?[0-9]*$`).test(value["nombreMail"])) return
+            if (!new RegExp(`^-?[0-9]*$`).test(value["besoinStockage"])) return
+            const notEmpty = Object.entries(value).every(([key, value]) => value.toString().trim() !== "")
+
+            if (notEmpty
+                && recapchaChecked
+                // && document.getElementById('condition-accept').checked
+            ) {
+                if (participated.includes(value.phone)) {
+
+                    document.getElementById("phone").classList.add("input-invalid");
+                    document.getElementById("error-user-exists").classList.remove("d-none");
+                } else {
+                    document.getElementById("error-user-exists").classList.add("d-none");
+                    document.getElementById("phone").classList.remove("input-invalid");
+
+
+                    window.localStorage.setItem("users", JSON.stringify([...participated, value.phone]));
+                    console.log(value);
+                    document.getElementById("custom-modal").classList.remove("modal-hidden");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="custom-modal modal-hidden" id="custom-modal">
+    <div class="custom-modal-popup">
+        <h3>تم ارسال الاستمارة !</h3>
+        <br>
+        <div class="p-3">
+            <h4>تم إرسال طلبك!</h4>
+            <p class="text-center">
+                سيتم الاتصال بك قريبًا من قبل مندوب مبيعات
+            </p>
+        </div>
+        <br>
+        <a class="red-btn" href="../ar/index.html">الصفحة الرئيسية</a>
+    </div>
+</div>
+<!-- Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-58PHK5M"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>(function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+        'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src =
+        '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-58PHK5M');
+</script>
+<div class="document">
+    <input type="hidden" id="sec_key" value="6LeGrnkiAAAAAHI13xfRNP91jZN2NXiT3Yk0hqRX">
+    <!-- CSS sheets -->
+    <link rel="stylesheet" href="../ODZ-Assets/odz-icons/style.css">
+    <link rel="stylesheet" href="../ODZ-Assets/css/app-rtl.css">
+    <link rel="stylesheet" href="../ODZ-Assets/css/vendors/jquery-ui-1.css">
+    <script src="../ODZ-Assets/js/vendors/jquery-1.11.2.min.js"></script>
+    <script src="../ODZ-Assets/js/vendors/modernizr-2.8.3.min.js"></script>
+    <script src="../ODZ-Assets/js/vendors/mousewheel.min.js"></script>
+    <script src=" /Ooredoo/Satellite?pagename=OoredooAlgeria%2FODZCommon%2FContent%2FScript%2FODZCurrentDate"></script>
+    <script>
+        var assets_home = '/ODZ-Assets';
+        var layers = new Array();
+    </script>
+    <div class="mobile-menu mobile-menu--main" data-trigger="navbar-toggle">
+        <div class="search-bar">
+            <div class="search-box v-none">
+                <form action="http://www.ooredoo.dz/Ooredoo/Satellite">
+                    <input type="hidden" name="pagename" value="OoredooAlgeria/ODZCommon/Content/StartSearch">
+                    <input name="search" type="text" placeholder="ابحث">
+                    <i class="icon icon-search"></i>
+                    <input type="submit">
+                </form>
+            </div>
+            <ul>
+                <li><a href="http://www.ooredoo.dz/Ooredoo/Algerie/contactuspage" class="mail"><i
+                        class="icon icon-mail"></i></a></li>
+                <li><a href="http://www.ooredoo.dz/Ooredoo/Algerie/trouvez-nous" class="location"><i
+                        class="icon icon-location"></i></a></li>
+                <li><a href="#"
+                       onclick="javascript:window.open('http://chat.ooredoo.dz/system/templates/chat/ooredoo/chat.html?subActivity=Chat&amp;entryPointId=1001&amp;templateName=ooredoo&amp;languageCode=fr&amp;countryCode=FR&amp;ver=v11','_blank','width=400, height=viewportheight, left=(viewportwidth - 400), top=0, screenX=0, screenY=0');"
+                       class="chat"><i class="icon icon-chat"></i></a></li>
+                <li class="lang-selector change-lang">
+
+                    <a href="javascript:void(0)" data-toggle="dropdown">
+                        <i class="icon icon-language"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="rtl" href="../index.html">
+                                Français
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <ul class="collapsing-menu mobile-menu__collapsing-menu clearfix">
+            <li>
+                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/solutions-telecom">
+                    حلول الاتصالات
+<!--                    <style>.promo-stamp{background: #ffd500;color: #221420;box-shadow: -1px 1px 2px 1px #00000036;transform: rotate(-12deg) skew(2deg) translate(24px,0px);}</style>-->
+                </a>
+<!--                <ul>-->
+<!--                    <li>-->
+<!--                        <a href="#">-->
+<!--                            عروض المحمول-->
+<!--                        </a>-->
+<!--                        &lt;!&ndash; <a class="offres-mobile" href="#">-->
+<!--                           <img class="svg" src="../assets/imgs/icon-offer.png" alt="">Offres Mobile</a> &ndash;&gt;-->
+<!--                        <ul>-->
+<!--                            <li>-->
+<!--                                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/solutions-telecom/offres-mobiles/shift">-->
+<!--                                    <span style="font-weight: bold;">SHIFT  </span>-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                        <ul>-->
+<!--                            <li>-->
+<!--                                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/solutions-telecom/offres-mobiles/ambition">-->
+<!--                                    <span style="font-weight: bold;">AMBITION  </span>-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                        <ul>-->
+<!--                            <li>-->
+<!--                                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/solutions-telecom/offres-mobiles/elite">-->
+<!--                                    <span style="font-weight: bold;">ELITE  </span>-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                        <ul>-->
+<!--                            <li>-->
+<!--                                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/solutions-telecom/offres-mobiles/smart-200">-->
+<!--                                    SMART 200-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                        <ul>-->
+<!--                            <li>-->
+<!--                                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/solutions-telecom/offres-mobiles/smart-100">-->
+<!--                                    SMART 100-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                        <ul>-->
+<!--                            <li>-->
+<!--                                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/solutions-telecom/offres-mobiles/smart-50">-->
+<!--                                    SMART 50-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                        <ul>-->
+<!--                            <li>-->
+<!--                                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/solutions-telecom/offres-mobiles/forfaits-appels">-->
+<!--                                    اشتراك مكالمات-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--                <ul>-->
+<!--                    <li>-->
+<!--                        <a href="#">-->
+<!--                            إنترنت-->
+<!--                        </a>-->
+<!--                        &lt;!&ndash; <a class="offres-mobile" href="#">-->
+<!--                           <img class="svg" src="../assets/imgs/icon-offer.png" alt="">Offres Mobile</a> &ndash;&gt;-->
+<!--                        <ul>-->
+<!--                            <li>-->
+<!--                                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/sahla-box-corpo">-->
+<!--                                    ساهلة Pro box-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                        <ul>-->
+<!--                            <li>-->
+<!--                                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/data-share-pro">-->
+<!--                                    <span style="font-weight: bold;">DATA SHARE PRO </span>-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                        <ul>-->
+<!--                            <li>-->
+<!--                                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/solutions-telecom/internet/data-pro">-->
+<!--                                    <span style="font-weight: bold;">data Pro </span>-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                        <ul>-->
+<!--                            <li>-->
+<!--                                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/solutions-telecom/internet/internet-a-la-demande">-->
+<!--                                    الإنترنت على الطلب-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                        <ul>-->
+<!--                            <li>-->
+<!--                                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/solutions-telecom/internet/facebook-en-mode-gratuit">-->
+<!--                                    فايسبوك بصيغة مجانية-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--                <ul>-->
+<!--                    <li>-->
+<!--                        <a href="#">-->
+<!--                            الخدمات-->
+<!--                        </a>-->
+<!--                        &lt;!&ndash; <a class="offres-mobile" href="#">-->
+<!--                           <img class="svg" src="../assets/imgs/icon-offer.png" alt="">Offres Mobile</a> &ndash;&gt;-->
+<!--                        <ul>-->
+<!--                            <li>-->
+<!--                                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/services/services-pro">-->
+<!--                                    خدمــات المؤسّسـات-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                        <ul>-->
+<!--                            <li>-->
+<!--                                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/services/utile">-->
+<!--                                    مفيـد-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                        <ul>-->
+<!--                            <li>-->
+<!--                                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/services/service-plus">-->
+<!--                                    + الخدمات-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                        <ul>-->
+<!--                            <li>-->
+<!--                                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/services/Divertissement">-->
+<!--                                    تسلية-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--                <ul>-->
+<!--                    <li>-->
+<!--                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/roaming_enterprise">-->
+<!--                            خدمة التجوال للمؤسّسات-->
+<!--                        </a>-->
+<!--                        &lt;!&ndash; <a class="offres-mobile" href="#">-->
+<!--                           <img class="svg" src="../assets/imgs/icon-offer.png" alt="">Offres Mobile</a> &ndash;&gt;-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--                <ul>-->
+<!--                    <li>-->
+<!--                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/international_enterprise">-->
+<!--                            المكالمات الدولية-->
+<!--                        </a>-->
+<!--                        &lt;!&ndash; <a class="offres-mobile" href="#">-->
+<!--                           <img class="svg" src="../assets/imgs/icon-offer.png" alt="">Offres Mobile</a> &ndash;&gt;-->
+<!--                    </li>-->
+<!--                </ul>-->
+            </li>
+            <li>
+                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/la-carte-m2m">
+                    بطاقة M2M
+                </a>
+            </li>
+            <li>
+                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/telephones-entre">
+                    هواتف
+                </a>
+            </li>
+            <li>
+                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/4g">
+                    4G
+                </a>
+            </li>
+        </ul>
+    </div>
+    <header class="">
+        <div class="top-bar" style="display: block;">
+            <div class="container--large">
+                <div class="top-bar__left pull-left col-lg-6 col-sm-8" style="padding: 0;">
+                    <ul>
+                        <li id="menuCat-0"><a href="http://www.ooredoo.dz/Ooredoo/Algerie/particuliers">الخواص</a>
+                        </li>
+                        <li id="menuCat-1" class="active"><a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises">
+                            المؤسسات</a>
+                        </li>
+                        <li id="menuCat-2"><a href="http://www.ooredoo.dz/Ooredoo/Algerie/tout-sur-ooredoo"> عن
+                            Ooredoo</a></li>
+                        <li id="menuCat-3" class="d-none d-md-inline-block">
+                            <a href="https://appstorm.ooredoo.dz/"> <i class="icon icon-chevron-right"></i> شركاء</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-bar__right pull-right d-none d-md-block">
+                    <div class="search-bar">
+                        <ul>
+                            <li class="support-link" style="">
+                                <a class="support" href="http://www.ooredoo.dz/Ooredoo/Algerie/contactuspage"> <i
+                                        class="icon icon-support"></i> <span class="hidden-sm hidden-md">الدعم</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/contactuspage" class="mail"> <i
+                                        class="icon icon-mail"></i> <span class="hidden-md">اتصل بنا</span> </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ooredoo.dz/Ooredoo/Algerie/trouvez-nous" class="location"> <i
+                                        class="icon icon-location"></i> <span class="hidden-md">اين تجدنا</span> </a>
+                            </li>
+                            <li class="lang-selector">
+                                <a href="javascript:void(0)" data-toggle="dropdown">
+                                    <i class="icon icon-language"></i>اللغة
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="rtl" href="../index.html">
+                                            Français
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="support-menu hidden-xs hidden-sm" data-trigger="support-link">
+                <div class="container--large">
+                    <ul>
+                        <li><a href="#"
+                               onclick="javascript:window.open('http://chat.ooredoo.dz/system/templates/chat/ooredoo/chat.html?subActivity=Chat&amp;entryPointId=1001&amp;templateName=ooredoo&amp;languageCode=fr&amp;countryCode=FR&amp;ver=v11','_blank','width=400, height=viewportheight, left=(viewportwidth - 400), top=0, screenX=0, screenY=0');"><i
+                                class="icon icon-chat"></i>محادثة</a></li>
+                        <li><a href="http://www.ooredoo.dz/Ooredoo/Algerie/contactuspage"><i
+                                class="icon icon-mail-at"></i>تواصل</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar" role="navigation">
+            <div class="container--large">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="logo" alt="Ooredoo" href="http://www.ooredoo.dz/Ooredoo/Algerie/particuliers" onclick="">
+                        <img class="" title="Logo Ooredoo" src="../assets/brand/ooredoo-bsnss-logo.svg" width="">
+                    </a>
+                </div>
+                <div class="navbar-menu hidden-xs hidden-sm clearfix">
+                    <ul class="main-menu">
+                        <li id="header_1462285465592" class="hasMenu">
+                            <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/solutions-telecom">
+                                حلول الاتصالات
+                                <style>.promo-stamp {
+                                    background: #ffd500;
+                                    color: #221420;
+                                    box-shadow: -1px 1px 2px 1px #00000036;
+                                    transform: rotate(-12deg) skew(2deg) translate(24px, 0px);
+                                }</style>
+                            </a>
+                        </li>
+                        <li id="header_1462276259622" class="hasMenu"><a
+                                href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/la-carte-m2m"> بطاقة M2M
+                        </a>
+                        </li>
+                        <li id="header_1462277505515"><a
+                                href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/telephones-entre">هواتف</a></li>
+                        <li id="header_1462277010863"><a
+                                href="http://www.ooredoo.dz/Ooredoo/Algerie/tout-sur-ooredoo/4g">4G</a></li>
+                    </ul>
+                </div>
+                <div class="user-links">
+                    <ul class="user-menu">
+                        <li>
+                            <a class="user-menu__user show_monespaceLink" href="https://my.ooredoo.dz">
+                                <i class="icon icon-user"></i>
+                                <span>حسابي<br>
+                           <small class="ellipsis">دخول المستخدم</small>
+                           </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="user-menu__cib" href="http://estorm.ooredoo.dz">
+                                <img class="icon icon-cib" src="../ODZ-Assets/imgs/logo-cib.gif">
+                                <span>eStorm</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <script type="text/javascript">
+            function logout(oamurl) {
+                var jqxhr = $.ajax(oamurl, function () {
+                }).done(function (data) {
+                    setTimeout(function () {
+                        location.reload(true);
+                    }, 7000);
+                });
+            }
+        </script>
+        <script type="text/javascript">
+            function fullMsisdn() {
+                var msisdnVal = $('#user').val();
+                var realMsisdn = msisdnVal;
+                if ((/^05/).test(msisdnVal))
+                    realMsisdn = '213' + msisdnVal.substring(1);
+                $('#username').val(realMsisdn);
+            }
+        </script>
+        <script type="text/javascript">
+            function login(redirectUrl) {
+                $("#targeturl").val(redirectUrl);
+                fullMsisdn();
+                $("#login_form").submit();
+                $('.login-popup').fadeOut(200);
+            }
+        </script>
+        <script type="text/javascript">
+            function changeLocale(preferred_locale, locale_name, url) {
+                deleteCookie('preferred_locale');
+                deleteCookie('locale_name');
+                setTimeout(function () {
+                    setCookie('preferred_locale', preferred_locale);
+                    setCookie('locale_name', locale_name);
+                    window.location.href = url;
+                }, 100);
+            }
+        </script>
+        <script type="text/javascript">
+            function deleteCookie(name) {
+                document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+            }
+
+            function setCookie(cname, cvalue) {
+                var d = new Date();
+                d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
+                var expires = "expires=" + d.toUTCString();
+                document.cookie = cname + "=" + cvalue + "; " + expires + "; path=/";
+            }
+
+            function hasCookie(cname) {
+                var name = cname + "=";
+                var ca = document.cookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+        </script>
+        <script type="text/javascript">
+            function submitRating(formId, btn, successMessageId) {
+                btn.disabled = true;
+                var btnid = '#' + btn.id;
+                var url = "http://www.ooredoo.dz/Ooredoo/Satellite"; // the script where you handle the form input.
+                $.ajax({
+                    type: "GET",
+                    url: url,
+                    data: $(formId + ", " + formId + " form").serialize(), // serializes the form's elements.
+                    success: function (data) {
+                        $(btnid).hide();
+                        $(successMessageId).show();
+                        setCookie(formId, '');
+                    }
+                });
+            }
+        </script>
+        <script type="text/javascript">
+            function increaseDownloadCount(id, downloadUrl) {
+                var url = "http://www.ooredoo.dz/Ooredoo/Satellite";
+                $.ajax({
+                    type: "GET",
+                    url: url,
+                    data: "pagename=OoredooAlgeria/ODZCommon/Content/Ajax/ODZDownloadCount&id=" + id,
+                    success: function (data) {
+                        var elementId = '#count_' + id;
+                        $(elementId).html(data + ' <i class="icon-file_download"></i>');
+                    }
+                });
+                window.open(downloadUrl);
+            }
+        </script>
+        <script type="text/javascript">
+            function submitMailForm(formId, successMessageId, failMessageId) {
+                var url = "http://www.ooredoo.dz/Ooredoo/Satellite"; // the script where you handle the form input.
+                formId = '#' + formId;
+                $.ajax({
+                    type: "GET",
+                    url: url,
+                    data: $(formId).serialize(), // serializes the form's elements.
+                    contentType: "text/plain; charset=UTF-8",
+                    success: function (data) {
+                        if (successMessageId != null && successMessageId != '') {
+                            var jso = jQuery.parseJSON(data);
+                            if (jso.status) {
+
+                                $(successMessageId).attr('style', 'color:#00a767;display:all');
+
+                                if ($('#callmebackForm').find('form') != null && $('#callmebackForm').find('form').get(0) != null)
+                                    $('#callmebackForm').find('form').get(0).reset();
+
+                                if ($('#callmeback').find('form') != null && $('#callmeback').find('form').get(0) != null)
+                                    $('#callmeback').find('form').get(0).reset();
+
+                                $('.callmeback').select2('val', '');
+                                if ($('.contact-form').length > 0) {
+                                    $('.contact-form').find('form').get(0).reset();
+                                    $('.contactform-select').find('select').select2('val', '');
+                                }
+
+                                if (formId == "#CallMeBackModalForm") {
+                                    $('#callmeback').modal('hide');
+                                    $(successMessageId).attr('style', 'display:none');
+
+                                }
+                            } else {
+                                $(failMessageId).attr('style', 'display:all');
+                            }
+                        }
+                        grecaptcha.reset(captchaClientId);
+                    }
+                });
+            }
+        </script>
+        <script type="text/javascript">
+            var formData = "";
+
+            function submitDynamicForm(formId, successMessageId, failMessageId) {
+                $(successMessageId).attr('style', 'display:none');
+                $(failMessageId).attr('style', 'display:none');
+                formId = '#' + formId
+
+                var url = "http://www.ooredoo.dz/Ooredoo/Satellite";//+"?pagename="+$(formId).find("input[name=pagename]").val()+"&c="+$(formId).find("input[name=c]").val()+"&cid="+$(formId).find("input[name=cid]").val()+"&_authkey_="+$(formId).find("input[name=_authkey_]").val(); // the script where you handle the form input.
+                formData = new FormData($(formId)[0])
+                var formKey = "";
+                var assetId = "";
+                var i = 0;
+
+                for (var key of newFormData.keys()) {
+                    if (key.indexOf("assetId") != -1)
+                        assetId = newFormData.getAll(key);
+                }
+
+                for (var key of newFormData.keys()) {
+
+                    if (key.indexOf("___") != -1) {
+                        formKey = key.split("___")[0];
+                        //console.log("formKey:"+formKey); 
+                        formData.append(formKey + i + "_file", $('#file_' + assetId).get(0).files[i], newFormData.getAll(key)[i].name)
+
+                        i++;
+                    }
+
+                }
+                //formData.append("newFormData",newFormData);
+                var dataVar = formData;//$(formId).serialize();
+                //alert("sending data = "+dataVar);
+                $.ajax({
+                    type: "post",
+                    /*beforeSend: function (request)
+                    {
+                        //"&_authkey_="+$(formId).find("input[name=_authkey_]").val()
+                        request.setRequestHeader("_authkey_", $(formId).find("input[name=_authkey_]").val());
+                    },*/
+                    url: url,
+                    data: dataVar,
+                    cache: false,
+                    //contentType: "multipart/form-data",//"application/json",//"multipart/form-data",//
+                    contentType: false,
+                    processData: false,
+                    //dataType: false,
+                    //dataType: 'text',
+                    success: function (data) {
+                        if (successMessageId != null && successMessageId != '') {
+                            var jso = jQuery.parseJSON(data);
+                            if (jso.status) {
+                                $(formId).find(successMessageId).attr('style', 'color:#00a767;display:all');
+                                $(formId)[0].reset();
+                                $(formId).find('.dynamic-fields__select').select2('val', '');
+                            } else {
+                                $(formId).find(failMessageId).attr('style', 'color:red;display:all');
+                            }
+                        }
+                        $(formId).find('.dynamic-field-submit').removeAttr('disabled');
+                    }
+                });
+            }
+        </script>
+        <script>
+            //Login Required PopUp
+            var done = false;
+
+            function checkLoginPopup(event) {
+                var dataLang = $('html').attr('dir');
+                if (done == false) {
+                    var loginRequired = $('.login-required');
+                    var loginPopUp = $('.login-popup');
+                    loginRequired.each(function () {
+                        $(this).on('click', function () {
+                            var checkURL = $(this).data('url');
+                            console.log(checkURL);
+
+                            function goToURL() {
+                                location.href = checkURL;
+                            }
+
+                            if (loggedin == true) {
+                                goToURL();
+                            } else {
+                                $('#urlPopup').attr('value', checkURL);
+                                var loginRequiredPos = $(this).offset();
+                                loginPopUp.css("display", "none");
+                                if ($(window).width() < 992) {
+                                    loginPopUp.css({
+                                        "right": "auto",
+                                        "left": (($(window).width() - loginPopUp.outerWidth()) / 2) + "px",
+                                        "top": (($(window).height() - loginPopUp.outerHeight()) / 2) + "px",
+                                        "position": "fixed"
+                                    });
+                                } else {
+                                    var topWide = (loginRequiredPos.top) - (loginPopUp.outerHeight() - (loginRequired.outerHeight() + 5));
+                                    if (dataLang !== 'rtl') {
+                                        loginPopUp.css({
+                                            "right": "auto",
+                                            "left": (loginRequiredPos.left) - (loginPopUp.outerWidth() - (loginRequired.outerWidth() + 5)),
+                                            "top": topWide,
+                                            "position": "absolute"
+                                        });
+                                    } else {
+                                        loginPopUp.css({
+                                            "left": "auto",
+                                            "right": $(window).innerWidth() - (loginRequiredPos.left) - (loginPopUp.outerWidth()),
+                                            "top": topWide,
+                                            "position": "absolute"
+                                        });
+                                    }
+                                }
+                                $(window).on('resize', function () {
+                                    var win = $(this);
+                                    if (win.width() < 992) {
+                                        loginPopUp.css({
+                                            "right": "auto",
+                                            "left": (($(window).width() - loginPopUp.outerWidth()) / 2) + "px",
+                                            "top": (($(window).height() - loginPopUp.outerHeight()) / 2) + "px",
+                                            "position": "fixed"
+                                        });
+                                    }
+                                });
+                                loginPopUp.fadeIn().addClass('visible');
+                            }
+                        });
+                        $(document).mouseup(function (e) {
+                            if (!loginPopUp.is(e.target) && loginPopUp.hasClass('visible') && loginPopUp.has(e.target).length === 0) {
+                                loginPopUp.fadeOut(200);
+                            }
+                        });
+                    });
+                    $('.close-login-popup').on('click', function () {
+                        loginPopUp.fadeOut();
+                    });
+                    done = true;
+                    $(event).click();
+                }
+                ;
+            };
+        </script>
+        <!-- Including Chat Script -->
+    </header>
+    <!-- Modal : login-box -->
+    <div class="login-popup">
+        <div class="modal-content">
+            <div class="modal-header center color-white">
+                <div class="h4 modal-title">
+                    <i class="icon icon-user"></i>حسابي
+                    <div class="close-login-popup pull-right flip"><i class="icon-cross-circle"></i></div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="text" value="" id="urlPopup" style="display: none;">
+                            <input type="email" class="form-control" id="nomPopup"
+                                   placeholder="رقم الموبايل او البريد المسجل">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="password" id="passwordPopup" class="form-control" placeholder="كلمة المرور">
+                        </div>
+                    </div>
+                    <label class="normal" for="remember">
+                        <input id="rememberPopup" type="checkbox" name="remember" value="remember"> تذكرني</label>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="row--narrow">
+                    <div class="col-xs-6">
+                        <a href="/Portal/faces/registration" class="btn btn-black btn--small"><i
+                                class="icon icon-user-add"></i>مستخدم جديد</a>
+                    </div>
+                    <div class="col-xs-6">
+                        <button onclick="popupLogin();" type="button" class="btn btn--small" data-dismiss="modal"><i
+                                class="icon icon-user-check"></i>الدخول
+                        </button>
+                    </div>
+                </div>
+                <a class="link link--red pull-right flip" href="/Portal/faces/forgotPassword"><small>فقدت كلمة المرور؟
+                    <i class="icon icon-chevron-right"></i></small></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function popupLogin() {
+            $('#user').val($('#nomPopup').val());
+            $('#password').val($('#passwordPopup').val());
+            $('#PersistentLogin').val($('#rememberPopup').val());
+            login($('#urlPopup').val());
+        }
+    </script>
+    <!-- Modal -->
+    <div class="modal fade" id="eTicketing" tabindex="-1" aria-labelledby="eTicketingModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">×</span></button>
+                    <div class="h4 modal-title" id="eTicketingModal">E-Ticketing</div>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="nom" class="col-sm-offset-1 col-sm-2 control-label">Nom</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="nom" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="prenom" class="col-sm-offset-1 col-sm-2 control-label">Prénom</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="prenom" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="besoin" class="col-sm-offset-1 col-sm-2 control-label">Besoin</label>
+                            <div class="col-sm-8">
+                                <select name="besoin" id="besoin" class="eticketing-select select2-hidden-accessible"
+                                        tabindex="-1" aria-hidden="true">
+                                    <option value="option1">Option One</option>
+                                    <option value="option2">Option Two</option>
+                                    <option value="option3">Option Three</option>
+                                    <option value="option4">Option Four</option>
+                                    <option value="option5">Option Five</option>
+                                    <option value="option6">Option Six</option>
+                                </select>
+                                <span class="select2 select2-container select2-container--default" dir="rtl"
+                                      style="width: auto;"><span class="selection"><span
+                                        class="select2-selection select2-selection--single" role="combobox"
+                                        aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                        aria-labelledby="select2-besoin-container"><span
+                                        class="select2-selection__rendered" id="select2-besoin-container"
+                                        title="Option One">Option One</span><span class="select2-selection__arrow"
+                                                                                  role="presentation"><b
+                                        role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                                                                                           aria-hidden="true"></span></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description" class="col-sm-offset-1 col-sm-2 control-label">Description</label>
+                            <div class="col-sm-8">
+                                <textarea type="password" class="form-control" id="description"
+                                          placeholder=""></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-blue btn--small"><i class="icon icon-send"></i> Envoyer
+                    </button>
+                    <button type="button" class="btn btn-darkgrey btn--small" data-dismiss="modal"><i
+                            class="icon icon-cross-circle"></i> Annuler
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal : Buy Confirmation Box -->
+    <div class="modal fade" id="buyModal" tabindex="-1" role="dialog" aria-labelledby="buyModal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">×</span></button>
+                    <div class="h4 modal-title"></div>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-darkgrey" data-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-default btn-acheter">تأكيد</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function checkNightBundle() {
+            $('.night-bundle').each(function (index, item) {
+                var starDate = new Date();
+                var endDate = new Date();
+
+                cItem = $(item);
+                var data_starttime = String(cItem.data('starttime'));
+                //console.log(data_starttime)
+                var timeSplit = data_starttime.split(":");
+                starDate.setHours(timeSplit[0].split(" ")[0]);
+                if (timeSplit.length > 1)
+                    starDate.setMinutes(timeSplit[1].split(" ")[0]);
+                var data_endtime = String(cItem.data('endtime'));
+                //console.log(data_endtime);
+                timeSplit = data_endtime.split(":");
+                endDate.setHours(timeSplit[0].split(" ")[0]);
+                if (timeSplit.length > 1)
+                    endDate.setMinutes(timeSplit[1].split(" ")[0]);
+                if (endDate < starDate) {
+                    endDate.setHours(endDate.getHours() + 24);
+                }
+                if (sysCurrentDateForNB > starDate && sysCurrentDateForNB < endDate) {
+                    cItem.show();
+                    cItem.parent().show();
+                } else {
+                    cItem.parent().hide();
+                }
+            });
+        }
+    </script>
+    <script type="text/javascript">
+        function paginateSection(assetId, pIndex, pageSize, listSize) {
+            var formId = "#paginationForm" + assetId;
+            var styleClass = ".pag" + assetId;
+            var rowId = "#pagination" + assetId;
+            var pIndexId = "#pIndex" + assetId;
+            var btnId = "#page" + pIndex + "" + assetId;
+            $(rowId).html("<div class=\"container\"><img id=\"loadingImg\" alt=\"\" src='/ODZ-Assets/imgs/loadingsearch.gif'/></div>");
+            $(pIndexId).val(pIndex);
+            $(styleClass).removeClass("active");
+            $(styleClass + " input").prop('disabled', false);
+            $(btnId).addClass("active");
+            $(btnId + " input").prop('disabled', true);
+            var nextId = "#next" + assetId + " input";
+            var prevId = "#prev" + assetId + " input";
+            if ((pIndex * pageSize) >= listSize)
+                $(nextId).prop('disabled', true);
+            else
+                $(nextId).prop('disabled', false);
+            if (pIndex == 1)
+                $(prevId).prop('disabled', true);
+            else
+                $(prevId).prop('disabled', false);
+
+            var url = "http://www.ooredoo.dz/Ooredoo/Satellite";
+            $.ajax({
+                type: "GET",
+                url: url,
+                data: $(formId).serialize(), // serializes the form's elements.
+                contentType: "text/plain; charset=UTF-8",
+                success: function (data) {
+                    $(rowId).html(data);
+                    setTimeout(function () {
+                        $(rowId + ' .box').matchHeight();
+                    }, 1000);
+                }
+            });
+        }
+
+        function paginateSectionStep(assetId, step, pageSize, listSize) {
+            var pIndexId = "#pIndex" + assetId;
+            paginateSection(assetId, parseInt($(pIndexId).val()) + parseInt(step), pageSize, listSize);
+
+        }
+    </script>
+    <script type="text/javascript">
+        var runningPurchase = false;
+        $(document).ready(function () {
+            $('.btn-buymodal').on('click', function () {
+
+                $(window).bind('beforeunload', function (eventObject) {
+
+                    returnValue = "Your request is being handled by our server, please wait until confirmation response";
+
+                    eventObject.returnValue = returnValue;
+                    return returnValue;
+                });
+
+                $('.btn-acheter').removeAttr('style');
+                var buyModalTitle = $(this).data('title');
+                var buyModalContent = $(this).data('content');
+                var buyURL = $(this).data('url');
+                var msisdn = $(this).data('msisdn');
+                var bundleId = $(this).data('bundleid');
+                var locale = $(this).data('locale');
+                $('#buyModal .modal-title').html(buyModalTitle);
+                $('#buyModal .modal-body').html(buyModalContent);
+                $('#buyModal').modal('show');
+                $('.btn-acheter').attr('onclick', '').unbind('click');
+                $('.btn-acheter').on('click', function () {
+                    $('.btn-acheter').prop('disabled', true);
+                });
+                $('.btn-acheter').on('click', function () {
+                    if (runningPurchase)
+                        return;
+                    runningPurchase = true;
+                    $('.btn-acheter').fadeOut();
+                    setTimeout(function () {
+                        $('.btn-acheter').prop('disabled', false);
+                        runningPurchase = false;
+                    }, 500);
+                    jQuery.ajax({
+                        type: 'GET',
+                        url: buyURL,
+                        data: {
+                            'msisdn': msisdn,
+                            'BundleId': bundleId,
+                            'Locale': locale,
+                        },
+                        cache: false,
+                        success: function (data, status, xhr) {
+                            if (xhr.getResponseHeader('Content-Type').startsWith('text/html')) {
+                                $('#buyModal .modal-body').html(data);
+                            } else {
+                                $('#buyModal .modal-body').html(data.message);
+                            }
+
+                        },
+                        error: function (data) {
+                            $('#buyModal .modal-body').html(data);
+                        }
+                    });
+                });
+            });
+        });
+        $('.user-menu__cib span').text('eStorm');
+    </script>
+    <style>.user-menu__cib span {
+        line-height: 32px;
+    }
+    </style>
+    <script>
+        $("#header_1460512134994").addClass("active");
+    </script>
+    <main class="page bg-light pt-4">
+        <!-- //END: Page Title -->
+        <div class="container mt-4">
+            <main class="form-card mb-4">
+
+                <div class="py-5 row justify-content-center g-5">
+
+                    <div class="col-md-7 col-lg-8">
+                        <h1 class="text-muted form-title mb-4">استمارة</h1>
+                        <form class="needs-validation" novalidate onsubmit="return false">
+                            <div class="row g-3">
+
+                                <div class="col-sm-12">
+                                    <label for="raisonSociale" class="form-label"><strong>التسمية الاجتماعية <span
+                                            class="red-color">*</span></strong></label>
+                                    <input type="text" class="form-control" id="raisonSociale"
+                                           placeholder="الرجاء إدخال التسمية الاجتماعية" value="" required>
+                                    <div class="invalid-feedback">
+                                        الرجاء إدخال التسمية الاجتماعية
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label for="nomDuContact" class="form-label"><strong>الاسم و اللقب<span
+                                            class="red-color">*</span></strong></label>
+                                    <input type="text" class="form-control" id="nomDuContact"
+                                           placeholder="الرجاء إدخال اسم الشخص ولقبه " value="" required>
+                                    <div class="invalid-feedback">
+                                        الرجاء إدخال الاسم و اللقب
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label for="postOccupe" class="form-label"><strong>الوظيفة</strong><span
+                                            class="red-color">*</span></label>
+                                    <input type="text" class="form-control" id="postOccupe"
+                                           placeholder="الرجاء إدخال وظيفتك " value="" required>
+                                    <div class="invalid-feedback">
+                                        الرجاء إدخال وظيفتك الصحيحة
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label for="adresse" class="form-label"><strong>العنوان</strong><span
+                                            class="red-color">*</span></label>
+                                    <input type="text" class="form-control" id="adresse"
+                                           placeholder="الرجاء إدخال عنوانك" value="" required>
+                                    <div class="invalid-feedback">
+                                        الرجاء إدخال العنوان الصحيح
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label for="wilaya" class="form-label"><strong>الولاية </strong><span
+                                            class="red-color">*</span></label>
+                                    <select type="number" class="form-control" id="wilaya"
+                                            required>
+                                        <option id="1" value="ADRAR" selected="true">أدرار</option>
+                                        <option id="2" value="CHLEF">الشلف</option>
+                                        <option id="3" value="LAGHOUAT">الأغواط</option>
+                                        <option id="4" value="OUM EL BOUAGHI">أم البواقي</option>
+                                        <option id="5" value="BATNA">باتنة</option>
+                                        <option id="6" value="BÉJAÏA">بجاية</option>
+                                        <option id="7" value="BISKRA">بسكرة</option>
+                                        <option id="8" value="BECHAR">بشار</option>
+                                        <option id="9" value="BLIDA">البليدة</option>
+                                        <option id="10" value="BOUIRA">البويرة</option>
+                                        <option id="11" value="TAMANRASSET">تمنراست</option>
+                                        <option id="12" value="TBESSA">تبسة</option>
+                                        <option id="13" value="TLEMCEN">تلمسان</option>
+                                        <option id="14" value="TIARET">تيارت</option>
+                                        <option id="15" value="TIZI OUZOU">تيزي وزو</option>
+                                        <option id="16" value="ALGER">الجزائر</option>
+                                        <option id="17" value="DJELFA">الجلفة</option>
+                                        <option id="18" value="JIJEL">جيجل</option>
+                                        <option id="19" value="SETIF">سطيف</option>
+                                        <option id="20" value="SAEFDA">سعيدة</option>
+                                        <option id="21" value="SKIKDA">سكيكدة</option>
+                                        <option id="22" value="SIDI BEL ABBES">سيدي بلعباس</option>
+                                        <option id="23" value="ANNABA">عنابة</option>
+                                        <option id="24" value="GUELMA">قالمة</option>
+                                        <option id="25" value="CONSTANTINE">قسنطينة</option>
+                                        <option id="26" value="MEDEA">المدية</option>
+                                        <option id="27" value="MOSTAGANEM">مستغانم</option>
+                                        <option id="28" value="M'SILA">المسيلة</option>
+                                        <option id="29" value="MASCARA">معسكر</option>
+                                        <option id="30" value="OUARGLA">ورقلة</option>
+                                        <option id="31" value="ORAN">وهران</option>
+                                        <option id="32" value="EL BAYADH">البيض</option>
+                                        <option id="33" value="ILLIZI">إليزي</option>
+                                        <option id="34" value="BORDJ BOU ARRERIDJ">برج بوعريريج</option>
+                                        <option id="35" value="BOUMERDES">بومرداس</option>
+                                        <option id="36" value="EL TARF">الطارف</option>
+                                        <option id="37" value="TINDOUF">تندوف</option>
+                                        <option id="38" value="TISSEMSILT">تيسمسيلت</option>
+                                        <option id="39" value="EL OUED">الوادي</option>
+                                        <option id="40" value="KHENCHELA">خنشلة</option>
+                                        <option id="41" value="SOUK AHRAS">سوق أهراس</option>
+                                        <option id="42" value="TIPAZA">تيبازة</option>
+                                        <option id="43" value="MILA">ميلة</option>
+                                        <option id="44" value="AIN DEFLA">عين الدفلى</option>
+                                        <option id="45" value="NAAMA">النعامة</option>
+                                        <option id="46" value="AIN TEMOUCHENT">عين تموشنت</option>
+                                        <option id="47" value="GHARDAEFA">غرداية</option>
+                                        <option id="48" value="RELIZANE">غليزان</option>
+                                        <option id="49" value="EL M'GHAIR">المغير</option>
+                                        <option id="50" value="EL MENIA">المنيعة</option>
+                                        <option id="51" value="OULED DJELLAL">أولاد جلال</option>
+                                        <option id="52" value="BORDJ BAJI MOKHTAR">برج باجي مختار</option>
+                                        <option id="53" value="BÉNI ABBÈS">بني عباس</option>
+                                        <option id="54" value="TIMIMOUN">تيميمون</option>
+                                        <option id="55" value="TOUGGOURT">تقرت</option>
+                                        <option id="56" value="DJANET">جانت</option>
+                                        <option id="57" value="IN SALAH">عين صالح</option>
+                                        <option id="58" value="IN GUEZZAM">عين قزام</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        الرجاء إدخال الولاية الصحيحة
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="phone" class="form-label"><strong>رقم الهاتف<span
+                                            class="red-color">*</span></strong></label>
+                                    <div class="input-group has-validation">
+                                        <input type="text" class="form-control" id="phone" placeholder="مثال :
+0555xxxxxx	" required>
+                                        <div class="invalid-feedback">
+                                            الرجاء إدخال رقم هاتفك.
+                                        </div>
+                                        <div class="text-invalid d-none" id="error-user-exists">
+                                            تم استخدام هذا الرقم من قبل
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="email" class="form-label"><strong>البريد الإلكتروني <span
+                                            class="red-color">*</span></strong> <span class="text-muted"></span></label>
+                                    <input type="email" class="form-control" id="email"
+                                           pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                                           placeholder="you@example.com" required>
+                                    <div class="invalid-feedback">
+                                        الرجاء إدخال بريد إلكتروني صحيح.
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label for="nombreEmployes" class="form-label"><strong>عدد الموظفين</strong><span
+                                            class="red-color">*</span></label>
+                                    <select type="number" class="form-control" id="nombreEmployes"
+                                            required>
+                                        <option value="1-9" selected>1 الى 9</option>
+                                        <option value="10-99">10 الى 99</option>
+                                        <option value="100-249">100 الى 249</option>
+                                        <option value="250">250 أو أكثر</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        الرجاء إدخال عدد الموظفين الصحيح
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label for="secteurActivite" class="form-label"><strong>مجال العمل</strong><span
+                                            class="red-color">*</span></label>
+                                    <select type="number" class="form-control" id="secteurActivite"
+                                            required>
+                                        <option value="" selected>- اختيار مجال العمل -</option>
+
+                                        <option value="AGRICULTURE, CHASSE ET FORESTIERE">الزراعة والصيد والغابات
+                                        </option>
+
+                                        <option value="PECHE, AQUACULTURE">صيد األسماك وتربية األحياء المائية</option>
+
+                                        <option value="INDUSTRIES EXTRACTIVES">الصناعات االستخراجية</option>
+
+                                        <option value="INDUSTRIE MANUFACTURIERE">الصناعة التحويلية</option>
+
+                                        <option value="PRODUCTION ET DISTRIBUTION D'ELECTRICITE, DE GAZ">إنتاج وتوزيع
+                                            الكهرباء والغاز
+                                        </option>
+
+                                        <option value="CONSTRUCTION">التشييد</option>
+
+                                        <option value="COMMERCE, REPARATION AUTOMOBILES ET D'ARTICLES DOMESTIQUES">بيع
+                                            وإصالح المركبات اآللية والسلع المحلية
+                                        </option>
+
+                                        <option value="HOTELS ET RESTAURANTS">الفنادق والمطاعم</option>
+
+                                        <option value="TRANSPORTS, ET COMMUNICATIONS">النقل واالتصاالت</option>
+
+                                        <option value="ACTIVITES FINANCIERES">األنشطة المالية</option>
+
+                                        <option value="IMMOBILIER, LOCATION ET SERVICES AUX ENTREPRISES">األنشطة
+                                            العقارية واإليجارية والتجارية
+                                        </option>
+
+                                        <option value="ADMINISTRATION PUBLIQUE">اإلدارة العامة</option>
+
+                                        <option value="EDUCATION">التعليم</option>
+
+                                        <option value="SANTE ET ACTION SOCIALE">العمل الصحي واالجتماعي</option>
+
+                                        <option value="SERVICES COLLECTIFS SOCIAUX ET PERSONNELS">الخدمات االجتماعية
+                                            والشخصية المجتمعية
+                                        </option>
+
+                                        <option value="SERVICES DOMESTIQUES">الخدمات المنزلية</option>
+
+                                        <option value="ACTIVITES EXTRA-TERRITORIALES">الأنشطة الخارجة عن الإقليم
+                                        </option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        الرجاء إدخال مجال العمل الصحيح
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label for="nombreMail" class="form-label"><strong>عدد حسابات البريد الإلكتروني المحتاجة</strong><span
+                                            class="red-color">*</span></label>
+                                    <input type="number" class="form-control" id="nombreMail" min="1" step="1"
+                                           placeholder="50" value=""
+                                           required>
+                                    <div class="invalid-feedback">
+                                        الرجاء إدخال عدد حسابات البريد الإلكتروني المحتاجة
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label for="besoinStockage" class="form-label"><strong>متطلبات التخزين
+                                        (جيغا)</strong><span
+                                            class="red-color">*</span></label>
+                                    <input type="number" class="form-control" id="besoinStockage" min="1" step="1"
+                                           placeholder="10" value="" required>
+                                    <div class="invalid-feedback">
+                                        الرجاء إدخال متطلبات التخزين (جيغا)
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!--
+
+                               those are test keys.
+                               Use this site key in the HTML code your site serves to users.
+
+                               6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
+
+                               Use this secret key for communication between your site and reCAPTCHA.
+
+                               6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
+
+                               -->
+                            <div id="recaptcha" class="mt-3 g-recaptcha"
+                                 data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+
+                            <button class="w-100 btn btn-primary my-4" id="submit" onclick="process(this)">تأكبد</button>
+                        </form>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+
+        <script>
+            $("#searchFormId").submit(function (e) {
+                e.preventDefault();
+            });
+            var keyword;
+            var searching = false;
+            var currentCat = null;
+
+            function searchAgain(cat, subcat) {
+                if (searching)
+                    return;
+                searching = true;
+                keyword = $("#search").val();
+                var params = $("#searchFormId").serialize();
+                currentCat = cat;
+                if (cat != null && cat != 'null')
+                    params += "&cat=" + cat;
+                if (subcat != null && subcat != 'null')
+                    params += "&subcat=" + subcat;
+                params = params.replace("&subcat=&", "&");
+                var url = "http://www.ooredoo.dz/Ooredoo/Satellite";
+                $(".search_content_to_be_updated").html("<div class=\"container\"><img id=\"loadingImg\" alt=\"\" src='/ODZ-Assets/imgs/loadingsearch.gif'/></div>");
+                $.ajax({
+                    type: "GET",
+                    url: url,
+                    data: params,
+                    success: function (data) {
+                        $(".search_content_to_be_updated").html(data);
+                        $("#keyword").html("“" + keyword.replace(/[^\w\s]/gi, '') + "”");
+                        searching = false;
+                    },
+                    error: function () {
+                        searching = false;
+                    }
+                });
+            }
+
+            function searchSubcat(subcat) {
+                if (searching)
+                    return;
+                searching = true;
+                keyword = $("#search").val();
+                var params = $("#searchFormId").serialize();
+                if (currentCat != null && currentCat != 'null')
+                    params += "&cat=" + currentCat;
+                if (subcat != null && subcat != 'null')
+                    params += "&subcat=" + subcat;
+                params = params.replace("&subcat=&", "&");
+                var url = "http://www.ooredoo.dz/Ooredoo/Satellite";
+                $(".search_content_to_be_updated").html("<div class=\"container\"><img id=\"loadingImg\" alt=\"\" src='/ODZ-Assets/imgs/loadingsearch.gif'/></div>");
+                $.ajax({
+                    type: "GET",
+                    url: url,
+                    data: params,
+                    success: function (data) {
+                        $(".search_content_to_be_updated").html(data);
+                        $("#keyword").html("“" + keyword.replace(/[^\w\s]/gi, '') + "”");
+                        searching = false;
+                    },
+                    error: function () {
+                        searching = false;
+                    }
+                });
+            }
+        </script>
+        <script>
+            searchAgain(null, null);
+        </script>
+    </main>
+    <footer>
+        <section class="social-bar">
+            <div class="container">
+                <div class="h4 normal text-center"><span>ابقوا متصلين</span></div>
+                <ul class="clearfix social-icons social-icons--nocolors">
+                    <li>
+                        <a target="_blank" class=" " href="http://www.facebook.com/ooredooDZ">
+                            <img class="svg" title="Facebook"  src="../assets/icons/fb.png" width="27">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" class=" " href="https://www.youtube.com/user/OoredooDZ">
+                            <img class="svg" title="Youtube"  src="../assets/icons/yt.png" width="27">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" class=" " href="https://twitter.com/ooredoodz">
+                            <img class="svg" title="Twitter" src="../assets/icons/tw.png" width="27">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" class=" " href="https://www.instagram.com/ooredooalgerie/">
+                            <img class="svg" title="Instagram" src="../assets/icons/instagram.png" width="27">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- /Block Connect with us -->
+        <div class="short-links">
+            <div class="container">
+                <ul class="short-links__list">
+                    <li>
+                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/a-propos">
+                            عن شركة Ooredoo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/mentions-legales">
+                            المعلومات القانونية
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/catalogue-d-inter-connexion" >
+                        عرض التواصل 2022-2023
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/politique-qualite">
+                        سياسة الجودة
+                        </a>
+                    </li>
+                    <li>
+                        <a  href="http://www.ooredoo.dz/Ooredoo/Algerie/certificats-iso-9001">
+                        ISO 9001
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/whistleblowing">
+                            الإبلاغ عن المخالفات
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/contactuspage">
+                            اتصل بنا
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="full-links">
+            <div class="container">
+                <div class="row">
+                    <div class="row">
+                        <!-- Block Particuliers -->
+                        <section class="full-links__menu col-xs-12 col-sm-4 hidden-xs hidden-sm">
+                            <div class="list">
+                                <h4>
+                                    <a href="http://www.ooredoo.dz/Ooredoo/Algerie/particuliers">
+                                        الخواص
+                                    </a>
+                                </h4>
+                                <ul>
+                                    <li>
+                                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/particuliers/offres-mobiles/prepayees/hanya">
+                                            عـروض الهـاتف
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/particuliers/offres-internet">
+                                            إنترنت
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/particuliers/services">
+                                            خــدمات
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/particuliers/telephones-et-autres">
+                                            الهواتف وغيرها
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/particuliers/4g">
+                                            تجربة الجيل الرّابــع
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/la-gold-jdida">
+                                            La Gold جديدة
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="full-links__menu col-xs-12 col-sm-4 hidden-xs hidden-sm">
+                            <div class="list">
+                                <h4>
+                                    <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises">
+                                        المؤسسات
+                                    </a>
+                                </h4>
+                                <ul>
+                                    <li>
+                                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/solutions-telecom">
+                                            حلول الاتصالات
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/la-carte-m2m">
+                                            بطاقة M2M
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/telephones-entre">
+                                            الهواتف وغيرها
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises/4g">
+                                            تجربة الجيل الرّابــع
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="full-links__menu col-xs-12 col-sm-4 hidden-xs hidden-sm">
+                            <div class="list">
+                                <h4>
+                                    <a href="http://www.ooredoo.dz/Ooredoo/Algerie/tout-sur-ooredoo">
+                                        عن Ooredoo
+                                    </a>
+                                </h4>
+                                <ul>
+                                    <li>
+                                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/a-propos">
+                                            حول Ooredoo
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/a-la-une">
+                                            الأخبار
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/tout-sur-ooredoo/events-et-sponsoring">
+                                            أحداث والرّعاية
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/mecenat">
+                                            الأعمال الخيرية
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ooredoo.dz/Ooredoo/Algerie/tout-sur-ooredoo/4g">
+                                            تجربة الجيل الرّابـع
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="full-links__menu col-xs-12 col-sm-4 hidden-xs hidden-sm">
+                            <div class="list">
+                                <h4>
+                                    <a href="https://appstorm.ooredoo.dz/">
+                                        شركاء
+                                    </a>
+                                </h4>
+                                <ul>
+                                </ul>
+                            </div>
+                        </section>
+                        <!-- /Block Particuliers -->
+                        <!-- /Block All about Ooredoo -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-rights">
+            <p>© Copyright 2023 Ooredoo</p>
+        </div>
+        <!-- Modal : Call Me Back form -->
+    </footer>
+    <script type="text/javascript">
+        checkNightBundle();
+    </script>
+    <a href="#" class="back-top"></a>
+    <!-- JS vendors -->
+    <script src="../assets/dist/js/form-validation.js"></script>
+    <script src="../ODZ-Assets/js/vendors/bootstrap.min.js"></script>
+    <script src="../ODZ-Assets/js/vendors/jquery.mobile.custom.min.js"></script>
+    <script src="../ODZ-Assets/js/vendors/parallax.min.js"></script>
+    <script src="../ODZ-Assets/js/vendors/svg-injector.min.js"></script>
+    <script src="../ODZ-Assets/js/vendors/css3-animate-it.js"></script>
+    <script src="../ODZ-Assets/js/vendors/jquery.simplr.smoothscroll.min.js"></script>
+    <script src="../ODZ-Assets/js/vendors/browser.js"></script>
+    <script src="../ODZ-Assets/js/vendors/owl.carousel.min.js"></script>
+    <script src="../ODZ-Assets/js/vendors/jquery.matchHeight-min.js"></script>
+    <script src="../ODZ-Assets/js/vendors/jquery.form-validator.min.js"></script>
+    <script src="../ODZ-Assets/js/vendors/select2.full.min.js"></script>
+    <script src="../ODZ-Assets/js/vendors/masonry.pkgd.min.js"></script>
+    <script src="../ODZ-Assets/js/vendors/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../ODZ-Assets/js/vendors/jquery.jplayer.js"></script>
+    <script src="../ODZ-Assets/js/vendors/jquery.scrollTo.min.js"></script>
+    <script src="../ODZ-Assets/js/vendors/jquery.magnific-popup.min.js"></script>
+    <script src="../ODZ-Assets/js/vendors/jquery.tinytooltip.min.js"></script>
+    <script src="../ODZ-Assets/js/vendors/jquery-ui.js"></script>
+    <!-- JS main file -->
+    <script src="../ODZ-Assets/js/app.min.js"></script>
+    <script src="https://static.addtoany.com/menu/page.js"></script>
+    <script>
+        function loadChat() {
+            var cm = document.createElement('scr' + 'ipt');
+            cm.type = 'text/javascript';
+            cm.async = false;
+            cm.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'ooredoodz.dimelochat.com/chat/a2a2b5e0fd5dd88dab706f4c/loader.js';
+            var s = document.getElementsByTagName('scr' + 'ipt')[0];
+            s.parentNode.insertBefore(cm, s);
+        }
+    </script>
+</div>
+<div style="position: static;">
+    <div style="height: 1px; width: 1px; position: absolute; z-index: 100000; top: 0px; visibility: hidden;">
+        <iframe id="a2a_sm_ifr" title="AddToAny Utility Frame" transparency="true" allowtransparency="true"
+                frameborder="0" src="https://static.addtoany.com/menu/sm.24.html#type=core&amp;event=load"
+                style="height: 1px; width: 1px; border: 0px; left: 0px; top: 0px; position: absolute; z-index: 100000; display: none;"></iframe>
+    </div>
+</div>
+</body>
+</html>

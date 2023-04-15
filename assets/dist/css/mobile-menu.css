@@ -1,0 +1,176 @@
+.ooredoo-mobile-menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100vh;
+    /*width : 400px;*/
+}
+.mobile-menu.expanded {
+    box-shadow: 0 0 100px #333;
+    -webkit-box-shadow: 0 0 100px #333;
+    -moz-box-shadow: 0 0 100px #333;
+    -o-box-shadow: 0 0 100px #333;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.mobile-menu--main {
+    left: 0;
+}
+.mobile-menu {
+    position: fixed;
+    width: 350px;
+    height: 100%;
+    max-width: 85%;
+    min-width: 250px;
+    background-color: white;
+    z-index: 9999;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
+}
+.mobile-menu--main {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    -o-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+.mobile-menu--main .search-bar .search-box input[type="text"] {
+    width: calc(100% - 20px) !important;
+    margin-left: 8px;
+}
+.search-bar .search-box input[type="text"] {
+    background-color: #252525;
+    border: 1px solid #464646;
+    height: 26px;
+    line-height: 20px;
+    padding: 0 15px;
+    position: relative;
+    font-size: 90%;
+    width: 200px;
+    color: #787878;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+.mobile-menu--main .search-bar {
+    display: table;
+    width: 100%;
+    margin: 0;
+}
+
+.search-bar {
+    padding: 0;
+    background-color: #333;
+}
+.mobile-menu--main .search-bar .search-box {
+    display: table-cell;
+}
+.search-bar .search-box .icon {
+    margin-left: -27px;
+    display: inline-block;
+    color: #c4c4c4;
+    position: relative;
+    z-index: 9;
+    font-size: 110%;
+}
+.icon {
+    vertical-align: middle;
+}
+.icon {
+    margin-right: 10px;
+}
+.icon-search:before {
+    content: "\e902";
+}
+.search-bar .search-box input[type="submit"] {
+    background: transparent;
+    text-indent: -99999px;
+    height: 25px;
+    width: 40px;
+    margin-left: -35px;
+    display: inline-block;
+    border: 0;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+.mobile-menu--main .search-bar ul {
+    margin-left: 0;
+}
+.search-bar ul a {
+    color: #bebebe;
+}
+.mobile-menu__collapsing-menu, .mobile-menu__collapsing-menu ul {
+    padding-left: 0;
+}
+.mobile-menu__collapsing-menu {
+    width: 100%;
+    margin: 0;
+}
+.mobile-menu__collapsing-menu>li.expanded>a {
+    background-color: #e11b22;
+}
+
+.mobile-menu__collapsing-menu>li>a {
+    background-color: #ED1C24;
+    line-height: 47px;
+    font-weight: 700;
+    font-size: 1.25em;
+    color: #fff;
+}
+.mobile-menu__collapsing-menu a {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 1px solid white;
+    color: black;
+    font-size: 1.1875em;
+    line-height: 35px;
+}
+.mobile-menu__collapsing-menu li.expanded>a:after {
+    -webkit-transform: rotateZ(90deg);
+    -moz-transform: rotateZ(90deg);
+    -ms-transform: rotateZ(90deg);
+    -o-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+}
+.mobile-menu__collapsing-menu>li>a:after {
+    content: "\f105";
+    font-size: 140%;
+    font-family: 'icomoon';
+    display: inline-block;
+    float: right;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.mobile-menu__collapsing-menu, .mobile-menu__collapsing-menu ul {
+    padding-left: 0;
+}
+.mobile-menu__collapsing-menu>li>ul>li>a {
+    line-height: 45px;
+    padding-left: 20px;
+}
+.mobile-menu__collapsing-menu>li>ul>li a {
+    padding-left: 60px;
+}
+.mobile-menu__collapsing-menu a {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 1px solid white;
+    color: black;
+    font-size: 1.1875em;
+    line-height: 35px;
+}
+

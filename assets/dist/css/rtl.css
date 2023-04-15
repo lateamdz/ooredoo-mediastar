@@ -1,0 +1,55 @@
+
+body{
+	font-family: 'Almarai', sans-serif;
+}
+
+.font-monospace{
+	font-family: 'Noto Naskh Arabic', serif !important;
+	font-size: 1.2em !important;
+}
+kbd{
+	direction: rtl;
+	font-family: 'Almarai', sans-serif;
+	font-size: inherit
+
+}
+
+.list-inline-item:not(:last-child) {
+    margin-left: .5rem;
+}
+.button-groupe-inscription button:nth-child(2) {
+    margin-left: 0;
+	margin-right: 5px
+}
+
+li.langue{
+	border: none;
+	border-right: 1px solid #aaaaaa4d;
+	padding-right: 15px;
+	padding-left: 0
+}
+
+.main-menu > li > a{
+	font-family: 'Almarai', sans-serif;
+
+}
+.navbar-header .logo img{
+	margin: 17px 0;
+}
+
+@media (max-width: 767px){
+	.navbar-header .logo img {
+		margin: 7px 10px 7px 0;
+	}
+}
+.user-links .user-menu li a .icon{
+	margin-left: 5px;
+	float: right;
+}
+.form-check .form-check-input {
+    float: right;
+    margin-left: 1.5em;
+}
+.form-check-input[type=checkbox] {
+    margin-left: 5px;
+}
