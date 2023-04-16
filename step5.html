@@ -8,8 +8,12 @@
 	<meta name="author" content="Ooredoo Algeria">
 
 	<title>Media Star - Inscription</title>
+
+
 	<link rel="icon" href="https://www.ooredoo.qa/portal/Satellite?blobcol=urldata&blobheader=image%2Fico&blobkey=id&blobtable=MungoBlobs&blobwhere=1451306808470&ssbinary=true" />
-	<link rel="apple-touch-icon" href="https://www.ooredoo.qa/cs/OoredooQatar/Images/app_logo.png" /> <!-- Bootstrap core CSS -->
+	<link rel="apple-touch-icon" href="https://www.ooredoo.qa/cs/OoredooQatar/Images/app_logo.png" />
+
+	<!-- Bootstrap core CSS -->
 	<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
 	<style>
@@ -26,13 +30,25 @@
 				font-size: 3.5rem;
 			}
 		}
+
+		.filepond--credits {
+			display: none;
+		}
+
 	</style>
 
+
+	<!-- Custom styles for this template -->
+	<link href="assets/dist/css/form-validation.css" rel="stylesheet">
 	<!-- Custom styles for this page -->
 	<link href="assets/dist/css/main.css" rel="stylesheet">
+	<!-- Custom Form -->
+	<link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="bg-light">
+<div id="loading-mask"></div>
+
 	<div>
 
 		<header class="">
@@ -61,7 +77,7 @@
 									<a href="http://www.ooredoo.dz/Ooredoo/Algerie/trouvez-nous" class="location"> <i class="icon icon-location"></i> <span class="hidden-md">Trouvez-nous</span> </a>
 								</li>
 								<li class="lang-selector">
-									<a href="ar/index.html" data-toggle="dropdown"> <i class="icon icon-language"></i>عربي </a>
+									<a href="ar/step1.html" data-toggle="dropdown"> <i class="icon icon-language"></i>عربي </a>
 								</li>
 							</ul>
 						</div>
@@ -94,7 +110,7 @@
 									<a href="http://www.ooredoo.dz/Ooredoo/Algerie/trouvez-nous" class="location"> <i class="icon icon-location"></i> <span class="hidden-md">Trouvez-nous</span> </a>
 								</li>
 								<li class="lang-selector">
-									<a href="ar/index.html" data-toggle="dropdown"> <i class="icon icon-language"></i>عربي </a>
+									<a href="ar/step1.html" data-toggle="dropdown"> <i class="icon icon-language"></i>عربي </a>
 								</li>
 							</ul>
 						</div>
@@ -117,6 +133,7 @@
 											box-shadow: -1px 1px 2px 1px #00000036;
 											transform: rotate(-12deg) skew(2deg) translate(24px, 0px);
 										}
+
 									</style>
 								</a>
 							</li>
@@ -147,139 +164,71 @@
 		</header>
 
 	</div>
-	<main>
-
-		<!-- Hero  -->
-		<div id="section-one">
-			<div class="ncontainer">
-				<div class="nrow">
-					<div class="">
-						<div class="six-boxes">
-							<img src="assets/brand/hero-preload.png">
-							<div class="container col-md-5 mx-auto arrow-hero">
-
-								<div class="row mx-1 gap-2 d-sm-flex justify-content-sm-center mb-2 flex-column flex-md-row ">
-									<a href="step1.html" type="button" class="col btn btn-primary btn-lg px-3 gap-3 fs-5">Participer</a>
-									<a href="http://www.ooredoo.dz/Ooredoo/Algerie/tout-sur-ooredoo/media-star-2022" type="button" class="col btn btn-light btn-lg px-3 fs-5" target="_blank">En savoir plus</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-
-
-
-
-
-
-
-
-		<!-- Qu'est ce que tStart?   -->
-
-		<div class="px-4 pt-5 mt-4 text-center ">
-			<h1 class="display-4 fw-bold">15<sup>ème</sup> édition <span class="text-red">Media Star</span></h1>
-			<div class="col-lg-10 mx-auto my-4">
-				<p class="fs-5 my-2">Ooredoo lance la 15<sup>ème</sup> édition du concours
-					« Media Star » destiné aux journalistes professionnels des médias algériens
-
-				</p>
-				<p class="fs-6 fw-light my-2">L’édition 2022 traite de la thématique principale de :
-				</p>
-				<p class="fs-6 fw-bold my-2 mb-4">« La transformation digitale en Algérie : réalités, enjeux et perspectives »
-				</p>
-				<p class="fs-6 fw-bold my-1">Sous-thèmes :
-
-				</p>
-				<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-					<div id="questions-tstart" class="carousel slide" data-bs-ride="carousel">
-						<div class="carousel-inner">
-							<div class="carousel-item active " data-bs-interval="4000">
-								<div class="badge bg-red text-wrap px-4 py-3 font-monospace">
-									(1) L’impact de la digitalisation sur le développement économique et social en Algérie
-								</div>
-							</div>
-							<div class="carousel-item" data-bs-interval="4000">
-								<div class="badge bg-red text-wrap px-4 py-3 font-monospace">
-									(2) L’impact de la digitalisation sur le développement environnemental en Algérie
-								</div>
-							</div>
-							<div class="carousel-item" data-bs-interval="4000">
-								<div class="badge bg-red text-wrap px-4 py-3 font-monospace">
-									(3) La dématérialisation des démarches et des documents administratifs en Algérie
-								</div>
-							</div>
-							<div class="carousel-item" data-bs-interval="4000">
-								<div class="badge bg-red text-wrap px-4 py-3 font-monospace">
-									(4) Les startups et la digitalisation en Algérie
-								</div>
-							</div>
-							<div class="carousel-item" data-bs-interval="4000">
-								<div class="badge bg-red text-wrap px-4 py-3 font-monospace">
-									(5) Le paiement électronique et le commerce électronique
-								</div>
-							</div>
-							<div class="carousel-item" data-bs-interval="4000">
-								<div class="badge bg-red text-wrap px-4 py-3 font-monospace">
-									(6) La certification et la signature électroniques
-								</div>
-							</div>
-							<div class="carousel-item" data-bs-interval="4000">
-								<div class="badge bg-red text-wrap px-4 py-3 font-monospace">
-									(7) La création de contenu numérique local et le support de diffusion
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="col-12 mb-0 mt-4 ">
-				<a href="#talents">
-					<img class="d-block mx-auto mb-0 bounce" src="assets/brand/arrow-down.svg" alt="" width="52" height="40">
-				</a>
-			</div>
-			<div class="overflow-hidden p-0 mx-0 " style="">
-				<div class="container  p-0 mx-auto">
-					<img src="assets/brand/startup-s1.png" class="img-fluid tstart" alt="Example image" loading="lazy" >
-				</div>
-			</div>
-		</div>
-
-
-
-
-
-		<!-- talents -->
-		<div class="px-4 pt-5 mt-4 text-center text-white bg-8mars " id="talents">
-			<h1 class="display-4 fw-bold">Journalistes ... Dévoilez vos talents!</h1>
-			<div class="col-lg-8 mx-auto my-3">
-				<p class="fs-4 fw-light my-5">Le concours est ouvert aux travaux publiés ou diffusés
-entre le <span class="badge bg-white text-pink">02 juillet 2021  </span> et le <span class="badge bg-white text-pink">11 septembre 2022 (inclus)</span> </p>
-				<div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-4">
-					<a href="step1.html" type="button" class="btn btn-lg px-4 gap-3 btn-primary btn-8mars">Participer à Media Star</a>
-
-				</div>
-			</div>
-
-			<div class="overflow-hidden p-0 mx-0 mt-n4" style="">
-				<div class="container  p-0 mx-auto ">
-					<img src="assets/brand/flowers.png" class="img-fluid tstart d-none d-md-block" alt="Example image" loading="lazy">
-					<img src="assets/brand/troph-mobile.png" class="img-fluid tstart d-block d-md-none" alt="Example image" loading="lazy">
-				</div>
-			</div>
-		</div>
-
-
-	</main>
-
-
 
 	<div class="container">
+		<main>
 
+			<div class="py-5 text-center  justify-content-center">
+
+				<h2>Inscription à Media Star</h2>
+				<br>
+				<div class="">
+					<div class="progress col-md-7 col-lg-8">
+						<div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+					</div>
+				</div>
+				<br>
+
+				<p class="fs-5"><b>Soumission de l'oeuvre </b> </p>
+
+			</div>
+
+			<div class="row justify-content-center g-5">
+
+				<div class="col-md-7 col-lg-8">
+					<form action="step6.html" class="needs-validation" enctype="multipart/form-data" novalidate>
+						<div class="row g-3">
+
+
+
+							<div class="col-sm-12">
+								<label for="filepond" class="form-label"><strong>Joindre l'oeuvre journalistique <span class="red-color">*</span></strong></label>
+								<input type="file" name="filepond" id="filepond" required multiple data-max-files="5" />
+								<div class="invalid-feedback" id="empty-file">
+									Le Fichier du travail est requis.
+								</div>
+
+
+							</div>
+							<hr class="my-2">
+
+							<div class="col-sm-12 my-3">
+								<input class="form-check-input" type="checkbox" value="" id="reglement" onclick="javacript:EnableDisableButton(this);" required>
+								<label class="form-check-label" for="reglement">
+									Je déclare avoir lu et approuvé le <a href="http://www.ooredoo.dz/Ooredoo/Satellite?blobcol=urldata&blobheader=application%2Fpdf&blobheadername1=Content-Disposition&blobheadervalue1=inline%3B+filename%3DReglement+du+concours+Media+Star+2022.pdf&blobkey=id&blobnocache=false&blobtable=MungoBlobs&blobwhere=1464606183522&ssbinary=true" target="_blank">règlement du concours</a></label>
+								<div id="reglementFeedback" class="invalid-feedback">
+									Vous devez accepter avant de soumettre.
+								</div>
+
+							</div>
+
+
+
+
+						</div>
+
+
+						<div class="button-groupe-inscription">
+							<a class=" btn btn-secondary btn" href="step4.html">Retour</a>
+							<button class=" btn btn-primary btn" type="submit" disabled id="send">Envoyer</button>
+
+						</div>
+
+					</form>
+				</div>
+			</div>
+
+		</main>
 
 		<footer class="my-5 pt-5 text-muted text-center text-small">
 			<p class="mb-1">&copy; 2022 Ooredoo Algérie </p>
@@ -288,7 +237,7 @@ entre le <span class="badge bg-white text-pink">02 juillet 2021  </span> et le <
 				<li class="list-inline-item"><a href="http://www.ooredoo.dz/Ooredoo/Satellite?blobcol=urldata&blobheader=application%2Fpdf&blobheadername1=Content-Disposition&blobheadervalue1=inline%3B+filename%3DReglement+du+concours+Media+Star+2022.pdf&blobkey=id&blobnocache=false&blobtable=MungoBlobs&blobwhere=1464606183522&ssbinary=true">Règlement</a></li>
 				<li class="list-inline-item"><a href="http://www.ooredoo.dz/Ooredoo/Algerie/tout-sur-ooredoo/media-star-2022">Médias</a></li>
 				<li class="list-inline-item">
-					<a href="step1.html" >Participer</a>
+					<a href="step1.html">Participer</a>
 				</li>
 			</ul>
 		</footer>
@@ -296,25 +245,76 @@ entre le <span class="badge bg-white text-pink">02 juillet 2021  </span> et le <
 
 
 	<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="assets/dist/js/main.js"></script>
+
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<script src="assets/dist/js/form-validation.js"></script>
+	<!-- Custom Form -->
+	<script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
+	<script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.js"></script>
+
+	<script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
 	<script>
-	var hero_img = document.querySelector(".six-boxes img");
-			
-			if (window.innerWidth < 766) {
-					
-					hero_img.setAttribute("src", "assets/brand/hero-promo-ram-mobile.png");
-				}else{
-					hero_img.setAttribute("src", "assets/brand/hero-promo-ram.png");
-					
-				}
-			window.addEventListener('resize', function(event) {
-				if (window.innerWidth < 766) {
-					hero_img.setAttribute("src", "assets/brand/hero-promo-ram-mobile.png");
-				}else{
-					hero_img.setAttribute("src", "assets/brand/hero-promo-ram.png");
-					
-				}
-}, true);
+		// We want to preview images, so we register
+		// the Image Preview plugin, We also register 
+		// exif orientation (to correct mobile image
+		// orientation) and size validation, to prevent
+		// large files from being added
+		FilePond.registerPlugin(
+			FilePondPluginFileValidateType,
+			FilePondPluginFileValidateSize
+		);
+
+		// Select the file input and use 
+		// create() to turn it into a pond
+		const inputElement = document.querySelector('input[type="file"]');
+
+		const pond = FilePond.create(inputElement, {
+			labelIdle: `Glissez et déposez votre fichier ici ou <span class="filepond--label-action">parcourez</span>`,
+			maxFileSize: '1000MB',
+			maxTotalFileSize: '2000MB',
+			labelMaxFileSizeExceeded: 'Le fichier est très lourd!',
+			labelMaxFileSize: 'La taille maximale du fichier est de 1Go',
+			labelMaxTotalFileSizeExceeded: 'Taille totale maximale dépassée',
+			labelMaxTotalFileSize: 'La taille total maximale des fichiers  est de 2 Go'
+
+
+		});
+
+		pond.on('addfile', (error, file) => {
+			if (error) {
+				document.getElementById("empty-file").style.display = "block";
+				return;
+			}
+			document.getElementById("empty-file").style.display = "none";
+		});
+
+		document.getElementById("send").addEventListener("click", function() {
+			if (pond.getFile() == null) {
+				document.getElementById("empty-file").style.display = "block";
+			} else {
+				document.getElementById("empty-file").style.display = "none";
+			}
+		});
+
+	</script>
+
+	<script type="text/javascript">
+		function EnableDisableButton(cb) {
+
+			if (cb.checked == 1) {
+				document.getElementById('send').disabled = false;
+			} else {
+				document.getElementById('send').disabled = true;
+			}
+
+
+		}
+
+		window.onload = function() {
+			// Remove White Div after page load
+			document.getElementById('loading-mask').style.display = 'none';
+		}
+
 	</script>
 
 </body>

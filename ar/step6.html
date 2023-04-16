@@ -7,9 +7,12 @@
 	<meta name="description" content="">
 	<meta name="author" content="Ooredoo Algeria">
 
-	<title>Média Start - Inscription</title>
-<link rel="icon" href="https://www.ooredoo.qa/portal/Satellite?blobcol=urldata&blobheader=image%2Fico&blobkey=id&blobtable=MungoBlobs&blobwhere=1451306808470&ssbinary=true" />
+	<title>Media Star - Inscription</title>
+	<link rel="icon" href="https://www.ooredoo.qa/portal/Satellite?blobcol=urldata&blobheader=image%2Fico&blobkey=id&blobtable=MungoBlobs&blobwhere=1451306808470&ssbinary=true" />
 	<link rel="apple-touch-icon" href="https://www.ooredoo.qa/cs/OoredooQatar/Images/app_logo.png" />
+
+
+
 	<!-- Bootstrap core CSS -->
 	<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -27,20 +30,33 @@
 				font-size: 3.5rem;
 			}
 		}
+
+		.filepond--credits {
+			display: none;
+		}
+		.filepond--root{
+			font-family: inherit !important;
+		}
 	</style>
 
+
+	<!-- Custom styles for this template -->
+	<link href="../assets/dist/css/form-validation.css" rel="stylesheet">
 	<!-- Custom styles for this page -->
 	<link href="../assets/dist/css/main.css" rel="stylesheet">
 	<!-- RTL Style -->
 	<link href="../assets/dist/css/rtl.css" rel="stylesheet">
-
+	<!-- Custom Form -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Noto+Naskh+Arabic&display=swap" rel="stylesheet">
 
 </head>
 
-<body  class="ar">
+<body class="bg-light">
+
+<div id="loading-mask"></div>
+
 	<div>
 
 		<header class="">
@@ -48,13 +64,11 @@
 				<div class="main-menu--large d-flex">
 					<div class="top-bar__left pull-left col-lg-6 col-sm-8" style="padding: 0;">
 						<ul>
-							<li id="menuCat-0"><a href="http://www.ooredoo.dz/Ooredoo/Algerie/particuliers">الخواص</a></li>
-							<li id="menuCat-1"><a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises"> المؤسسات</a></li>
-							<li id="menuCat-2" class="active"><a href="/Ooredoo/Algerie/tout-sur-ooredoo">
-								  عن  Ooredoo 
-		</a></li>
+							<li id="menuCat-0"><a href="http://www.ooredoo.dz/Ooredoo/Algerie/particuliers"> الخواص </a></li>
+							<li id="menuCat-1"><a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises"> المؤسسات </a></li>
+							<li id="menuCat-2" class="active"><a href="/Ooredoo/Algerie/tout-sur-ooredoo"> عن Ooredoo </a></li>
 							<li id="menuCat-3" class="d-none d-md-inline-block">
-								<a href="https://appstorm.ooredoo.dz/"> <i class="icon icon-chevron-right"></i> شركاء</a>
+								<a href="https://appstorm.ooredoo.dz/"> <i class="icon icon-chevron-right"></i> شركاء </a>
 							</li>
 						</ul>
 					</div>
@@ -71,7 +85,7 @@
 									<a href="http://www.ooredoo.dz/Ooredoo/Algerie/trouvez-nous" class="location"> <i class="icon icon-location"></i> <span class="hidden-md">اين تجدنا</span> </a>
 								</li>
 								<li class="lang-selector">
-									<a href="../index.html" data-toggle="dropdown"> <i class="icon icon-language"></i> Fr </a>
+									<a href="../step1.html" data-toggle="dropdown"> <i class="icon icon-language"></i> Fr </a>
 								</li>
 							</ul>
 						</div>
@@ -85,7 +99,7 @@
 						<ul>
 							<li id="menuCat-0" class="active"><a href="http://www.ooredoo.dz/Ooredoo/Algerie/particuliers">الخواص</a></li>
 							<li id="menuCat-1"><a href="http://www.ooredoo.dz/Ooredoo/Algerie/entreprises"> المؤسسات</a></li>
-							<li id="menuCat-2"><a href="http://www.ooredoo.dz/Ooredoo/Algerie/tout-sur-ooredoo"> عن  Ooredoo</a></li>
+							<li id="menuCat-2"><a href="http://www.ooredoo.dz/Ooredoo/Algerie/tout-sur-ooredoo"> عن Ooredoo</a></li>
 							<li id="menuCat-3" class="d-none d-md-inline-block">
 								<a href="https://appstorm.ooredoo.dz/"> <i class="icon icon-chevron-right"></i> شركاء</a>
 							</li>
@@ -104,7 +118,7 @@
 									<a href="http://www.ooredoo.dz/Ooredoo/Algerie/trouvez-nous" class="location"> <i class="icon icon-location"></i> <span class="hidden-md">اين تجدنا</span> </a>
 								</li>
 								<li class="lang-selector">
-									<a href="../index.html" data-toggle="dropdown"> <i class="icon icon-language"></i> Fr </a>
+									<a href="../step1.html" data-toggle="dropdown"> <i class="icon icon-language"></i> Fr </a>
 								</li>
 							</ul>
 						</div>
@@ -157,130 +171,37 @@
 		</header>
 
 	</div>
-	<main>
-
-	<!-- Hero  -->
-		<div id="section-one">
-			<div class="ncontainer">
-				<div class="nrow">
-					<div class="">
-						<div class="six-boxes">
-							<img src="../assets/brand/hero-ar-mobile.png">
-							<div class="container col-md-5 mx-auto arrow-hero">
-
-								<div class="row mx-1 gap-2 d-sm-flex justify-content-sm-center mb-2 flex-column flex-md-row ">
-									<a href="step1.html" type="button" class="col btn btn-primary btn-lg px-3 gap-3 fs-5">مشاركة</a>
-									<a href="http://www.ooredoo.dz/Ooredoo/Algerie/tout-sur-ooredoo/media-star-2022" type="button" class="col btn btn-light btn-lg px-3 fs-5" target="_blank">اقرأ المزيد</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-			<!-- Qu'est ce que tStart?   -->
-
-		<div class="px-4 pt-5 mt-4 text-center ">
-			<h1 class="display-4 fw-bold">Ooredoo تطلق  <span class="text-red">نجمة الإعلام</span></h1>
-			<div class="col-lg-10 mx-auto my-4">
-				<p class="fs-5 my-2">Ooredoo تُطلق الطبعة الخامسة عشر لمسابقة "نجمة الإعلام " الموجهة للصحفيين المُحترفين في وسائل الإعلام الجزائرية
-
-				</p>
-				<p class="fs-6 fw-light my-2">تتناول طبعة 2022 الموضوع الرئيسي: 
-				</p>
-				<p class="fs-6 fw-bold my-2 mb-4">"التحول الرقمي في الجزائر: حقائق، رهانات وآفاق"
-				</p>
-				<p class="fs-6 fw-bold my-1">مواضيع ثانوية :
-
-				</p>
-				<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-					<div id="questions-tstart" class="carousel slide" data-bs-ride="carousel">
-						<div class="carousel-inner">
-							<div class="carousel-item active " data-bs-interval="4000">
-								<div class="badge bg-red text-wrap px-4 py-3 font-monospace">
-									(1) أثر الرّقمنة على التطور الاقتصادي والاجتماعي في الجزائر
-								</div>
-							</div>
-							<div class="carousel-item" data-bs-interval="4000">
-								<div class="badge bg-red text-wrap px-4 py-3 font-monospace">
-									(2) أثر الرّقمنة على التطور البيئي في الجزائر
-								</div>
-							</div>
-							<div class="carousel-item" data-bs-interval="4000">
-								<div class="badge bg-red text-wrap px-4 py-3 font-monospace">
-									(3) رقمنة الوثائق والإجراءات الادارية في الجزائر
-								</div>
-							</div>
-							<div class="carousel-item" data-bs-interval="4000">
-								<div class="badge bg-red text-wrap px-4 py-3 font-monospace">
-									(4) المؤسسات التكنولوجية الناشئة والرّقمنة في الجزائر
-								</div>
-							</div>
-							<div class="carousel-item" data-bs-interval="4000">
-								<div class="badge bg-red text-wrap px-4 py-3 font-monospace">
-									(5) المصادقة والتوقيع الالكتروني
-								</div>
-							</div>
-							<div class="carousel-item" data-bs-interval="4000">
-								<div class="badge bg-red text-wrap px-4 py-3 font-monospace">
-									(6) الدفع الإلكتروني والتجارة الإلكترونية
-								</div>
-							</div>
-							<div class="carousel-item" data-bs-interval="4000">
-								<div class="badge bg-red text-wrap px-4 py-3 font-monospace">
-									(7) خلق المحتوى الرقمي المحلي ووسيلة البث
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="col-12 mb-0 mt-4 ">
-				<a href="#talents">
-					<img class="d-block mx-auto mb-0 bounce" src="../assets/brand/arrow-down.svg" alt="" width="52" height="40">
-				</a>
-			</div>
-			<div class="overflow-hidden p-0 mx-0 " style="">
-				<div class="container  p-0 mx-auto">
-					<img src="../assets/brand/startup-s1.png" class="img-fluid tstart" alt="Example image" loading="lazy" >
-				</div>
-			</div>
-		</div>
-
-
-
-		<!-- tStart vos apportera support dans : -->
-
-
-
-
-		<!-- 8 Mars -->
-		<div class="px-4 pt-5 mt-4 text-center text-white bg-8mars " id="talents">
-			<h1 class="display-4 fw-bold">الصحفيون .. اطلقوا العنان لمواهبكم</h1>
-			<div class="col-lg-8 mx-auto my-3">
-				<p class="fs-4 fw-light my-5">المسابقة مفتوحة للأعمال المنشورة أو المذاعة بين <span class="badge bg-white text-pink">02 جويلية 2021</span> و <span class="badge bg-white text-pink">11 سبتمبر 2022 (مشتمل)</span> </p>
-				<div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-4">
-					<a href="step1.html" type="button" class="btn btn-lg px-4 gap-3 btn-primary btn-8mars">شارك في نجمة الإعلام </a>
-
-				</div>
-			</div>
-
-			<div class="overflow-hidden p-0 mx-0 mt-n4" style="">
-				<div class="container  p-0 mx-auto ">
-					<img src="../assets/brand/flowers.png" class="img-fluid tstart" alt="Example image" loading="lazy">
-				</div>
-			</div>
-		</div>
-
-
-	</main>
-
-
 
 	<div class="container">
+		<main style="min-height: 70vh">
 
+			<div class="py-5 text-center  justify-content-center">
+
+				<h2 class="text-success fs-3">تم إرسال ملف الترشح </h2>
+				<div class="">
+					<div class="progress col-md-7 col-lg-8">
+						<div class="progress-bar progress-bar-striped  bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+					</div>
+				</div>
+				<br>
+				<div class="alert alert-success col-md-7 col-lg-8 " role="alert">
+					<h4 class="fs-4">   تم تسجيل مشاركتك بنجاح!</h4>
+					<p>شكرًا على مشاركتك في هذه المسابقة  </p>
+				</div>
+
+				<div class="col-dm-7 col-lg-8" style="margin-left: auto;margin-right: auto">
+					<hr class="my-4">
+
+
+					<div class="button-groupe">
+						<a class=" btn btn-secondary" href="index.html">الصفحة الرئيسية</a>
+					</div>
+				</div>
+
+			</div>
+
+
+		</main>
 
 		<footer class="my-5 pt-5 text-muted text-center text-small">
 			<p class="mb-1">&copy; 2022 Ooredoo Algérie </p>
@@ -293,29 +214,25 @@
 				</li>
 			</ul>
 		</footer>
+
 	</div>
 
 
 	<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="../assets/dist/js/main.js"></script>
-	<script>
-	var hero_img_ar = document.querySelector(".ar .six-boxes img");
-			
-			if (window.innerWidth < 766) {
-					
-					hero_img_ar.setAttribute("src", "../assets/brand/hero-ar-mobile.png");
-				}else{
-					hero_img_ar.setAttribute("src", "../assets/brand/hero-ar.png");
-					
-				}
-			window.addEventListener('resize', function(event) {
-				if (window.innerWidth < 766) {
-					hero_img_ar.setAttribute("src", "../assets/brand/hero-ar-mobile.png");
-				}else{
-					hero_img_ar.setAttribute("src", "../assets/brand/hero-ar.png");
-					
-				}
-}, true);
-	</script>
 
-</body></html>
+	<script src="../assets/dist/js/form-validation.js"></script>
+	<!-- add before </body> -->
+
+
+	<script>
+
+		// How to use with Pintura Image Editor:
+		// https://pqina.nl/pintura/docs/latest/getting-started/installation/filepond/
+		window.onload = function() {
+			// Remove White Div after page load
+			document.getElementById('loading-mask').style.display = 'none';
+		}
+	</script>
+</body>
+
+</html>
