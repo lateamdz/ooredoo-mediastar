@@ -2,7 +2,15 @@
 :root {
     --color-red: #ed1c24;
 }
-
+.btn {
+    font-weight: bold;
+}
+.btn-primary {
+    color: #fff;
+    border-radius: 8px;
+    background-color: var(--color-red);
+    border-color: var(--color-red);
+}
 @font-face {
     font-family: outfit;
     src: url(../../fonts/outfit.ttf);
@@ -238,7 +246,7 @@ body {
 
 /*====================================================================================================================*/
 .edition-section{
-    padding: 2rem 1rem;
+    padding: 4rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -249,4 +257,21 @@ body {
     max-width: 600px;
     height: 200px;
     background-color: red;
+}
+/*====================================================================================================================*/
+.trophy-section .trophy-container{
+    position: relative;
+    left: -1rem;
+    bottom: -4rem;
+    width: calc(100% + 2rem);
+}
+.trophy-section{
+    padding: 4rem 1rem;
+    text-align: center;
+    background: url("../../brand/edition16/newspaper.png");
+}
+@media (max-width: 400px) {
+    .trophy-section .trophy-container img{
+        transform: scale(1.5);
+    }
 }
