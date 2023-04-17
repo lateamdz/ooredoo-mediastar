@@ -923,6 +923,9 @@ header a {
 	display: table
 }
 
+.navbar >div:first-child{
+	width: 100%; padding: 8px 0; height: 78px
+}
 .navbar {
 	border-radius: 0;
 	border: 0;
@@ -1206,4 +1209,28 @@ img {
 .form-check-label{
 	font-size: .9em
 }
+/*====================================================================================================================*/
+:root {
+	--color-red: #ed1c24;
+}
+body, html {
+	font-family: outfit, ooredooregular, Arial;
+	color: black;
+}
+body {
+	overflow-x: hidden;
+}
+body .nav-container{
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 1500;
+}
+.top-bar,.top-bar__right>.search-bar{
+	background-color: #e4e5e5!important;
 
+}
+.top-bar__right ul li a{	color: #666666!important;}
+.top-bar__left ul li a{
+	color: var(--color-red);
+}
