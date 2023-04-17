@@ -75,20 +75,22 @@ body {
     background-color: #141c4d;
     color: white;
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: flex-start;*/
+    /*justify-content: space-between;*/
     position: relative;
     isolation: isolate;
 }
 
-.banner-section .banner-header h1{
+.banner-section .banner-header h1 {
     font-size: 5.0vw;
 
 }
+
 .banner-section .banner-header {
     /*height: 30%;*/
+    position: relative;
     padding: 1rem 2rem;
     width: 75%;
     display: flex;
@@ -97,8 +99,18 @@ body {
     justify-content: center;
 }
 
+.banner-section .banner-header .bulle {
+    position: absolute;
+    z-index: -1;
+    top: 20%;
+    right: -20%;
+    height: 70%;
+}
+
 .banner-section .people {
     max-height: 400px;
+    transform: scale(1.2);
+    transform-origin: bottom;
     position: absolute;
     bottom: 0;
     left: auto;
@@ -110,6 +122,8 @@ body {
 }
 
 .banner-section .banner-actions {
+    position: absolute;
+    bottom: 0;
     padding: 1rem 2rem;
     width: 100%;
     /*height: 20%;*/
@@ -118,19 +132,108 @@ body {
     align-items: flex-end;
     justify-content: center;
 }
+
 .banner-section .banner-actions > * {
     flex: 1;
     height: 100%;
-}
-
-.banner-section .banner-actions .banner-links a{
-    font-size: 1.4vw;
-}
-.banner-section .banner-actions .banner-links{
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 8px;
+}
+
+.banner-section .banner-actions .trophy-header {
 
 }
+
+.banner-section .banner-actions .ooredoo-header img {
+    height: 60px;
+    object-position: bottom;
+}
+
+.banner-section .banner-actions .trophy-header img {
+    /*transform: scale(2);*/
+    height: 260%;
+    margin-top: -100%;
+    object-position: bottom left;
+
+}
+
+.banner-section .banner-actions .banner-links a {
+    font-size: 1.4vw;
+}
+
+.banner-section .banner-actions .banner-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+
+}
+
+@media (max-width: 768px) {
+    .banner-section .banner-header {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .banner-section .banner-header h1 {
+        font-size: 6.6vw;
+    }
+
+    .banner-section .banner-actions {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 0.5rem;
+    }
+
+    .banner-section .banner-actions .trophy-header {
+        order: 0;
+        flex: 1 0 50%;
+    }
+
+    .banner-section .banner-actions .ooredoo-header {
+        order: 1;
+        flex: 1 0 50%;
+    }
+
+    .banner-section .banner-actions .trophy-header img {
+        transform: scale(1)
+    }
+
+    .banner-section .banner-actions .banner-links {
+
+        order: 2;
+        flex-direction: column;
+        align-items: center;
+        flex: 1 0 100%;
+        margin-top: 20px;
+    }
+
+    .banner-section .banner-actions .banner-links a {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .banner-section .people {
+        transform: scale(1) translateY(-30%);
+    }
+
+    .banner-section .banner-header .bulle {
+        position: absolute;
+        top: 22vw;
+        right: auto;
+        left: 0;
+        height: 70%;
+    }
+}
+
+@media (max-width: 400px) {
+    .banner-section {
+        height: calc(100vh - 173px);
+    }
+    .banner-section .banner-header .bulle {
+        top: 27vw;
+    }
+}
+
 /*====================================================================================================================*/
