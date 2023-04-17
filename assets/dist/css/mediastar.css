@@ -109,7 +109,7 @@ body {
 
 .banner-section .people {
     max-height: 400px;
-    transform: scale(1.2);
+    transform: scale(1.1) translateY(-10%);
     transform-origin: bottom;
     position: absolute;
     bottom: 0;
@@ -177,7 +177,7 @@ body {
     }
 
     .banner-section .banner-header h1 {
-        font-size: 6.6vw;
+        font-size: 7.6vw;
     }
 
     .banner-section .banner-actions {
@@ -237,3 +237,16 @@ body {
 }
 
 /*====================================================================================================================*/
+.edition-section{
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.edition-carousel{
+    width: 100%;
+    max-width: 600px;
+    height: 200px;
+    background-color: red;
+}
