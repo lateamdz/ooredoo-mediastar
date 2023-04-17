@@ -2,15 +2,24 @@
 :root {
     --color-red: #ed1c24;
 }
+
 .btn {
     font-weight: bold;
 }
+
 .btn-primary {
     color: #fff;
     border-radius: 8px;
     background-color: var(--color-red);
     border-color: var(--color-red);
 }
+
+.clean-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 @font-face {
     font-family: outfit;
     src: url(../../fonts/outfit.ttf);
@@ -24,6 +33,10 @@
 
 .fw-bold {
     font-weight: 900 !important;
+}
+
+.text-red {
+    color: var(--color-red);
 }
 
 .fw-bold-700 {
@@ -156,7 +169,8 @@ body {
 }
 
 .banner-section .banner-actions .ooredoo-header img {
-    height: 60px;
+    height: 100%;
+    max-height: 60px;
     object-position: bottom;
 }
 
@@ -239,55 +253,75 @@ body {
     .banner-section {
         height: calc(100vh - 173px);
     }
+
     .banner-section .banner-header .bulle {
         top: 27vw;
     }
 }
 
 /*====================================================================================================================*/
-.edition-section{
+.edition-section {
     padding: 4rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.edition-carousel{
+
+.edition-section h1 {
+    font-size: 5.0vw;
+}
+
+.edition-carousel {
     width: 100%;
     max-width: 600px;
     height: 200px;
     background-color: red;
 }
+
+@media (max-width: 768px) {
+
+    .edition-section h1 {
+        font-size: 7.6vw;
+    }
+}
+
 /*====================================================================================================================*/
-.trophy-section .trophy-container{
+.trophy-section .trophy-container {
     position: relative;
     left: -1rem;
     bottom: -4rem;
     width: calc(100% + 2rem);
 }
-.trophy-section{
+
+.trophy-section {
     padding: 4rem 1rem;
     text-align: center;
     background: url("../../brand/edition16/newspaper.png");
 }
+
 @media (max-width: 400px) {
-    .trophy-section .trophy-container img{
+    .trophy-section .trophy-container img {
         transform: scale(1.5);
     }
 }
+
 /*====================================================================================================================*/
-.director-section{
+.director-section {
     padding: 4rem 1rem;
 }
-.director-section .director-wrapper{
+
+.director-section .director-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-around;
     gap: 1rem;
 }
-.director-section .director-wrapper .director-img{
+
+.director-section .director-wrapper .director-img {
     max-width: 400px;
 }
+
 .director-section .red-quots {
     position: absolute;
     height: 35%;
@@ -296,25 +330,133 @@ body {
     left: 0;
     opacity: 0.5;
 }
+
 .director-section .director-content {
     max-width: 400px;
     position: relative;
     isolation: isolate;
 }
-.director-section .director-content p{
+
+.director-section .director-content p {
     text-align: justify;
     margin-top: 2rem;
 }
+
 @media (max-width: 400px) {
 
-    .director-section .director-content h4{
-        text-align: center!important;
+    .director-section .director-content h4 {
+        text-align: center !important;
         margin-top: 2rem;
     }
-    .director-section .director-wrapper{
-      flex-direction: column-reverse;
+
+    .director-section .director-wrapper {
+        flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
     }
+
+    .director-section .director-wrapper .director-img {
+        margin-top: 2rem;
+        max-width: 250px;
+    }
 }
+
 /*====================================================================================================================*/
+.back-to-15 > h1 {
+    font-size: 5.0vw;
+    padding: 0 2rem;
+}
+
+.back-to-15 > p {
+    font-size: 1.52vw
+}
+
+.back-to-15 {
+    padding: 4rem 1rem;
+}
+
+.back-to-15 .back-categories {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.back-to-15 .trophy-logo {
+    order: 1;
+    max-width: 27%;
+}
+
+.back-to-15 .double-category {
+    order: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.back-to-15 .double-category:last-child {
+    order: 2;
+}
+
+.back-to-15 .double-category .single-category {
+    padding: 1rem;
+    border-radius: 1.2rem;
+    border: 2px solid var(--color-red);
+    font-size: 0.8rem;
+}
+.back-to-15 .double-category .single-category p{
+    font-size: 1rem;
+}
+
+.back-to-15 .double-category .sharp-corner:first-child {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 1.2rem;
+}
+
+.back-to-15 .double-category .sharp-corner:last-child {
+    border-bottom-right-radius: 1.2rem;
+    border-top-right-radius: 0;
+}
+
+.back-to-15 .double-category:last-child .sharp-corner:first-child {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+}
+
+.back-to-15 .double-category:last-child .sharp-corner:last-child {
+    border-top-right-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+    border-top-left-radius: 0;
+}
+
+@media (max-width: 768px) {
+
+    .back-to-15 h1 {
+        font-size: 7.6vw;
+    }
+
+    .back-to-15 > p {
+        font-size: 1rem
+    }
+    .back-to-15 .back-categories{
+        flex-direction: column;
+    }
+
+    .back-to-15 .double-category:last-child,.back-to-15 .double-category,.back-to-15 .trophy-logo  {
+        order: unset;
+    }
+    .back-to-15 .sharp-corner {
+        border-radius: 1.2rem!important;
+    }
+    .back-to-15 .trophy-logo {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 400px) {
+
+}
