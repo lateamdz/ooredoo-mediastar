@@ -63,7 +63,6 @@
 }
 
 
-
 .sup {
     vertical-align: super;
     font-size: 0.5em;
@@ -261,6 +260,34 @@
     justify-content: center;
 }
 
+.edition-section .carousel-element > img {
+    height: 40px !important;
+    width: 40px !important;
+    top: -20px;
+    position: absolute;
+}
+
+.edition-section .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: unset!important;
+}
+.edition-section .carousel-element {
+    border-radius: 5rem;
+    padding: 10px 50px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: calc(100% - 100px);
+    background-color: #efefef;
+    border: 1px solid #cccccc;
+}
+
 .edition-section h1 {
     font-size: 5.0vw;
 }
@@ -269,13 +296,21 @@
     width: 100%;
     max-width: 600px;
     height: 200px;
-    background-color: red;
+    /*background-color: red;*/
 }
 
 @media (max-width: 768px) {
 
     .edition-section h1 {
         font-size: 7.6vw;
+    }
+}
+@media (max-width: 400px) {
+    .edition-section .carousel-element {
+        /*padding: 10px 50px;*/
+        padding: 20px 50px 10px;
+        border-radius: 2rem;
+        width: calc(100% - -20px);
     }
 }
 
@@ -403,7 +438,8 @@
     border: 2px solid var(--color-red);
     font-size: 0.8rem;
 }
-.back-to-15 .double-category .single-category p{
+
+.back-to-15 .double-category .single-category p {
     font-size: 1rem;
 }
 
@@ -438,16 +474,19 @@
     .back-to-15 > p {
         font-size: 1rem
     }
-    .back-to-15 .back-categories{
+
+    .back-to-15 .back-categories {
         flex-direction: column;
     }
 
-    .back-to-15 .double-category:last-child,.back-to-15 .double-category,.back-to-15 .trophy-logo  {
+    .back-to-15 .double-category:last-child, .back-to-15 .double-category, .back-to-15 .trophy-logo {
         order: unset;
     }
+
     .back-to-15 .sharp-corner {
-        border-radius: 1.2rem!important;
+        border-radius: 1.2rem !important;
     }
+
     .back-to-15 .trophy-logo {
         max-width: 80%;
     }
@@ -456,6 +495,7 @@
 @media (max-width: 400px) {
 
 }
+
 /*====================================================================================================================*/
 /*ARABIC*/
 /*====================================================================================================================*/

@@ -1,0 +1,116 @@
+
+.carousel-container .item {
+    background: #2c2c2c;
+    min-height: 200px;
+}
+
+.carousel-container h2 {
+    color: #FFF;
+    text-align: center;
+    padding: 5rem 0;
+    margin: 0;
+    font-style: italic;
+    font-weight: 300;
+}
+.carousel-container{
+    width: 100%;
+    overflow-x: hidden;
+}
+.carousel-container .owl-carousel{
+    width: 100%;
+    position: relative;
+    isolation: isolate;
+}
+
+
+.carousel-container .owl-theme .owl-nav [class*=owl-]>span{
+    font-size: 30px;
+    font-family: math;
+    background-color: var(--color-red)!important;
+    border-radius: 40px !important;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-container .owl-theme .owl-nav [class*=owl-]{
+    pointer-events: visible;
+
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 100%;
+}
+.carousel-container .owl-theme .owl-nav [class*=owl-]:hover {
+    background: unset;
+    text-decoration: none;
+}
+
+.carousel-container .owl-prev {
+    background-image: linear-gradient(-90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%) !important;
+    margin-left: -60px!important;
+}
+
+.carousel-container .owl-next {
+    background-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%) !important;
+    margin-right: -60px!important;
+}
+
+.carousel-container .owl-theme .owl-nav {
+
+    /*padding: 0 40px;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    color: white;
+    padding: 0 56px;
+}
+.carousel-container .owl-item .active {
+    pointer-events: none;
+}
+.carousel-container .owl-item .active.center{
+    pointer-events: all;
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-container .owl-theme .owl-nav [class*=owl-]>span{
+        transform: scale(0.8);
+    }
+    /*.carousel-container .owl-theme .owl-stage-outer{*/
+    /*    !*margin-left: -25px;*!*/
+    /*}*/
+    /*.carousel-container .owl-theme .owl-nav{*/
+    /*    !*width: 100px;*!*/
+    /*    !*padding: 0 70px;*!*/
+    /*}*/
+    /*.carousel-container .owl-theme .owl-nav [class*=owl-]{*/
+    /*    !*width: 50px;*!*/
+    /*}*/
+    /*.carousel-container .owl-prev {*/
+    /*    background-image: unset !important;*/
+    /*    margin-left: -60px!important;*/
+    /*    !*linear-gradient(-90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 10%) !important*!*/
+    /*}*/
+
+    /*.carousel-container .owl-next {*/
+    /*    background-image: unset!important;*/
+    /*    margin-right: -60px!important;*/
+    /*    !*background-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 10%) !important*!*/
+    /*}*/
+}
+@media only screen and (max-width: 400px) {
+    /*.carousel-container .owl-theme .owl-stage-outer{*/
+    /*    !*margin-left: -15px;*!*/
+    /*}*/
+}
