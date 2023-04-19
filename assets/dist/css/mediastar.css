@@ -13,31 +13,12 @@
     background-color: var(--color-red);
     border-color: var(--color-red);
 }
-html{
-    overflow-x: hidden;
-    /*padding-top: 115px;*/
-    overflow: hidden;
-}
-body{
-    overflow-y: scroll;
-    height: 100vh;
-}
 .clean-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-@font-face {
-    font-family: outfit;
-    src: url(../../fonts/outfit.ttf);
-}
-
-@font-face {
-    font-family: outfit-bold;
-    src: url(../../fonts/outfit.ttf);
-    font-weight: 800;
-}
 
 .fw-bold {
     font-weight: 900 !important;
@@ -49,18 +30,6 @@ body{
 
 .fw-bold-700 {
     font-weight: 700 !important;
-}
-
-@font-face {
-    font-family: rubik;
-    src: url(../../fonts/rubik.ttf);
-    font-weight: 200;
-}
-
-@font-face {
-    font-family: rubik-bold;
-    src: url(../../fonts/rubik.ttf);
-    font-weight: 800;
 }
 
 @media (min-width: 1200px) {

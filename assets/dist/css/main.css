@@ -19,7 +19,37 @@
 	font-weight: 400;
 	font-style: normal
 }
+@font-face {
+	font-family: outfit;
+	src: url(../../fonts/outfit.ttf);
+}
 
+@font-face {
+	font-family: outfit-bold;
+	src: url(../../fonts/outfit.ttf);
+	font-weight: 800;
+}
+
+@font-face {
+	font-family: rubik;
+	src: url(../../fonts/rubik.ttf);
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: rubik-bold;
+	src: url(../../fonts/rubik.ttf);
+	font-weight: 800;
+}
+html{
+	overflow-x: hidden!important;
+	/*padding-top: 115px;*/
+	overflow: hidden;
+}
+body{
+	overflow-y: scroll;
+	height: 100vh;
+}
 [class*=" icon-"],
 [class^=icon-] {
 	font-family: icomoon !important;
@@ -1119,7 +1149,8 @@ img {
 
 .user-links .user-menu li a {
 	vertical-align: middle;
-	min-width: 145px;
+	font-family: inherit!important;
+	min-width: 150px;
 	line-height: 1.25em;
 	color: #333;
 	font-weight: 700;
