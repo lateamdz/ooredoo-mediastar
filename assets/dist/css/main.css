@@ -955,6 +955,13 @@ header a {
 	position: initial
 }
 
+.navbar-header {
+	display: flex;
+	align-items: center;
+}
+.navbar-header .logo{
+	transform: scale(0.8);
+}
 .navbar-header .navbar-toggle .icon-bar + .icon-bar {
 	margin-top: 5px
 }
@@ -979,8 +986,10 @@ header a {
 }
 
 .navbar-header .logo img {
-	width: 100%;
+	/*width: 100%;*/
 	margin-left: 18px;
+	height: 100%;
+	object-fit: contain;
 	/*margin: 17px 10px*/
 }
 
@@ -1082,14 +1091,10 @@ img {
 }
 
 .user-links {
-	float: right;
-	position: absolute;
-	right: 0;
-	top: 8px
 }
 
 .user-links .user-menu {
-	display: inline-block;
+	display: flex;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -1177,7 +1182,18 @@ img {
 	}
 }
 
-@media (max-width:767px) {
+
+@media (max-width:1000px) {
+	.navbar-header {
+		width: calc(100% - 110px);
+	}
+	.navbar-header .logo{
+		flex: 1;
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+	}
 	.top-bar__left ul > li > a {
 		font-size: .8em
 	}
@@ -1188,11 +1204,13 @@ img {
 
 	.navbar-header .logo img {
 		/*margin: 7px 10px*/
+		height: 42px;
 	}
 
 	.user-links .user-menu li a {
 		padding-top: 9px
 	}
+	.navbar-menu{display: none!important;}
 }
 
 #section-one {

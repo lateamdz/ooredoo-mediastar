@@ -38,6 +38,8 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link href="../assets/dist/css/mobile-menu.css" rel="stylesheet">
+    <script src="../assets/dist/js/mobile-menu.js" defer></script>
     <link href="../assets/dist/css/carousel.css" rel="stylesheet">
     <script src="../assets/dist/js/carousel.js" defer></script>
     <!-- RTL Style -->
@@ -51,6 +53,11 @@
 </head>
 
 <body class="ar">
+<div class="custom-mobile-menu" id="custom-menu-backdrop">
+    <div class="custom-mobile-menu-content">
+
+    </div>
+</div>
 <div>
 
     <header class="">
@@ -137,8 +144,13 @@
         </div>
 
         <nav class="navbar" role="navigation" style="padding: 0;">
-            <div class="container--large" style="width: 100%;">
+            <div class="container--large" style="width: 100%;display: flex;align-items: center;justify-content: space-between;">
                 <div class="navbar-header" style="float: left;">
+                    <button id="custom-menu-trigger">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                     <a class="logo" alt="Ooredoo" href="http://www.ooredoo.dz/Ooredoo/Algerie/particuliers" onclick="">
                         <img class="" title="Logo Ooredoo" src="../assets/brand/ooredoo.png" width=""> </a>
                 </div>
