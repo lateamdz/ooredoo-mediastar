@@ -15,6 +15,12 @@
 }
 html{
     overflow-x: hidden;
+    /*padding-top: 115px;*/
+    overflow: hidden;
+}
+body{
+    overflow-y: scroll;
+    height: 100vh;
 }
 .clean-list {
     list-style: none;
@@ -367,11 +373,17 @@ html{
 
 .director-section .red-quots {
     position: absolute;
-    height: 35%;
+    height: 25%;
     top: 0;
     z-index: -1;
-    left: 0;
+    right: 0;
     opacity: 0.5;
+    transform: scaleX(1);
+}
+.ar .director-section .red-quots {
+    right: auto;
+    transform: scaleX(-1);
+    left: 0;
 }
 
 .director-section .director-content {

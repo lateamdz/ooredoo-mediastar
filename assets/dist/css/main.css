@@ -1222,9 +1222,13 @@ body {
 }
 body .nav-container{
 	position: sticky;
+	width: 100vw;
 	top: 0;
 	left: 0;
 	z-index: 1500;
+}
+.top-bar,.top-bar__right{
+	padding-inline-end: 1rem;
 }
 .top-bar,.top-bar__right>.search-bar{
 	background-color: #e4e5e5!important;
