@@ -1330,6 +1330,52 @@ body.ar .nav-container {
 }
 
 /*====================================================================================================================*/
+.support-menu.expanded {
+    pointer-events: auto;
+    display: block;
+    height: 38px;
+    width: 100%;
+    background-color: #626262;
+    opacity: 1;
+}
+
+.support-menu {
+    position: relative;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s;
+    height: 0;
+    overflow: hidden;
+}
+.support-menu ul li a {
+    color: white;
+}
+.support-menu ul li i {
+    margin-inline-end: 0.5rem;
+}
+.support-menu ul {
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    align-items: center;
+    justify-content: center;
+    margin-inline-end: 2rem;
+}
+.top-bar__right ul li a{
+    transition: all 0.2s;
+}
+.top-bar__right ul li a:hover{
+    background-color: white;
+    color: var(--color-red)!important;
+}
+li.support-link .support.expanded{
+    color: white!important;
+    background-color: #626262!important;
+}
 @media (max-width: 992px) {
     .user-links .user-menu li a{
         height: 50px;
