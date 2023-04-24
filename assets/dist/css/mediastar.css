@@ -14,6 +14,7 @@
     background-color: var(--color-red);
     border-color: var(--color-red);
 }
+
 .clean-list {
     list-style: none;
     padding: 0;
@@ -61,12 +62,15 @@
     align-items: center;
     justify-content: center;
 }
-.main-footer ,.main-footer>footer {
-    background-color:var(--color-light-grey);
+
+.main-footer, .main-footer > footer {
+    background-color: var(--color-light-grey);
 }
-.list-inline{
+
+.list-inline {
     padding-inline-start: 0;
 }
+
 /*====================================================================================================================*/
 .banner-section {
     height: calc(100vh - 107px);
@@ -105,10 +109,11 @@
     height: 70%;
 }
 
-.ar .banner-section .banner-header .bulle{
+.ar .banner-section .banner-header .bulle {
     right: auto;
     left: -20%
 }
+
 .banner-section .people {
     max-height: 400px;
     transform: scale(1.1) translateY(-10%);
@@ -229,7 +234,8 @@
         left: 0;
         height: 70%;
     }
-    .ar .banner-section .banner-header .bulle{
+
+    .ar .banner-section .banner-header .bulle {
         left: auto;
         right: 0;
     }
@@ -243,9 +249,11 @@
     .banner-section .banner-header .bulle {
         top: 27vw;
     }
+
     .banner-section .banner-actions .trophy-header {
         margin-bottom: -9%;
     }
+
     .banner-section .people {
         transform: scale(0.9) translateY(-50%);
     }
@@ -273,8 +281,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: unset!important;
+    background-color: unset !important;
 }
+
 .edition-section .carousel-element {
     border-radius: 5rem;
     padding: 10px 50px;
@@ -306,6 +315,7 @@
         font-size: 7.6vw;
     }
 }
+
 @media (max-width: 400px) {
     .edition-section .carousel-element {
         /*padding: 10px 50px;*/
@@ -325,6 +335,7 @@
     text-align: center;
     background: url("../../brand/edition16/newspaper.png");
 }
+
 .trophy-section .trophy-container {
     position: relative;
     left: -1rem;
@@ -332,21 +343,26 @@
     width: calc(100% + 2rem);
 
 }
+
 .ar .trophy-section .trophy-container {
     left: auto;
     right: -1rem;
 }
-.trophy-section .trophy-container img{
+
+.trophy-section .trophy-container img {
     object-position: bottom;
 }
+
 @media (max-width: 400px) {
     .trophy-section {
         height: auto;
     }
+
     .trophy-section .trophy-container {
         bottom: 0;
         margin-top: 4rem;
     }
+
     .trophy-section .trophy-container img {
         transform: scale(2.2);
     }
@@ -378,6 +394,7 @@
     opacity: 0.5;
     transform: scaleX(1);
 }
+
 .ar .director-section .red-quots {
     right: auto;
     transform: scaleX(-1);
@@ -397,6 +414,9 @@
 }
 
 @media (max-width: 768px) {
+    .director-section {
+        padding-bottom: 1rem;
+    }
 
     .director-section .director-content h4 {
         text-align: center !important;
@@ -427,7 +447,7 @@
 
 .back-to-15 {
     padding: 4rem 1rem;
-    background-color:var(--color-light-grey);
+    background-color: var(--color-light-grey);
 }
 
 .back-to-15 .back-categories {
@@ -517,6 +537,10 @@
 }
 
 @media (max-width: 768px) {
+
+    .back-to-15 {
+        padding-bottom: 1rem;
+    }
 
     .back-to-15 h1 {
         font-size: 7.6vw;
