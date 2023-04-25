@@ -315,7 +315,7 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     .edition-section .carousel-element {
         /*padding: 10px 50px;*/
         padding: 20px 50px 10px;
