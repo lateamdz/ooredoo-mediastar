@@ -240,7 +240,7 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     .banner-section {
         height: calc(100vh - 173px);
     }
@@ -352,7 +352,7 @@
     object-position: bottom;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     .trophy-section {
         height: auto;
     }
@@ -567,7 +567,7 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
 
 }
 
