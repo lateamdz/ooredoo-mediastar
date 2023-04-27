@@ -178,6 +178,7 @@
 }
 
 @media (max-width: 768px) {
+
     .banner-section .banner-header {
         width: 100%;
         padding: 0.5rem;
@@ -206,6 +207,10 @@
 
     .banner-section .banner-actions .trophy-header img {
         transform: scale(1)
+    }
+    .ar .banner-section .banner-actions .trophy-header img{
+        transform: scale(0.8);
+        transform-origin: bottom right;
     }
 
     .banner-section .banner-actions .banner-links {
